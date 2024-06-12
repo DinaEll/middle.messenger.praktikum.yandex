@@ -1,4 +1,5 @@
-import './changeData-page.scss';
+import '../../assets/changeAll-page.scss';
+
 export { default as ChangeDataPage } from './changeData-page.hbs?raw';
 
 document.addEventListener('DOMContentLoaded', () => {
