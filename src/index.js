@@ -10,6 +10,8 @@ const pages = {
   'errorInternalServer': [ Pages.ErrorInternalServerPage ],
   'start': [ Pages.StartPage ],
   'changeData': [ Pages.ChangeDataPage ],
+  'user': [ Pages.UserPage ],
+  'changePassword': [ Pages.ChangePasswordPage ],
 
 };
 
