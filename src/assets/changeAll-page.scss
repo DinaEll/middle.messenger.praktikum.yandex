@@ -1,8 +1,13 @@
-.changeData-page {
+.changeAll-page {
   width: 280px;
   height: auto;
   display: flex;
   flex-direction: column;
+
+  &__avatar-container {
+    text-align: center;
+    margin-top: 20px;
+  }
 
   &__nickname {
     text-align: center;
