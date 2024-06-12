@@ -1,25 +1,25 @@
 {{#> Dialog }}
     <main>
-        <form class="changeData-page">
-            <div class="changeData-page__avatar-container">
-                <label for="avatar-upload" class="changeData-page__avatar-label">
+        <form class="changeAll-page">
+            <div class="changeAll-page__avatar-container">
+                <label for="avatar-upload" class="changeAll-page__avatar-label">
                     <img src="../assets/Птица-секретарь.png" alt="Профиль" class="chat-page__profile-icon"/>
-                    <span class="changeData-page__avatar-text">Изменить</span>
+                    <span class="changeAll-page__avatar-text">Изменить</span>
                 </label>
-                <input type="file" id="avatar-upload" class="changeData-page__avatar-input" accept="image/*">
+                <input type="file" id="avatar-upload" class="changeAll-page__avatar-input" accept="image/*">
             </div>
-            <div class="changeData-page__nickname">
+            <div class="changeAll-page__nickname">
                 <span class="chat-page__username">Динка</span>
             </div>
-            <div class="changeData-page__content">
-                {{> InputField className="changeData-page__input" title="Почта" name="email" value="example@example.com" }}
-                {{> InputField className="changeData-page__input" title="Логин" name="login" value="example_login" }}
-                {{> InputField className="changeData-page__input" title="Имя" name="name" value="Дина" }}
-                {{> InputField className="changeData-page__input" title="Фамилия" name="surname" value="Пупина" }}
-                {{> InputField className="changeData-page__input" title="Имя в чате" name="name in chat" value="Динка" }}
-                {{> InputField className="changeData-page__input" title="Телефон" name="phone" value="8-925-111-11-11" }}
+            <div class="changeAll-page__content">
+                {{> InputField className="changeAll-page__input" title="Почта" name="email" value="example@example.com" }}
+                {{> InputField className="changeAll-page__input" title="Логин" name="login" value="example_login" }}
+                {{> InputField className="changeAll-page__input" title="Имя" name="name" value="Дина" }}
+                {{> InputField className="changeAll-page__input" title="Фамилия" name="surname" value="Пупина" }}
+                {{> InputField className="changeAll-page__input" title="Имя в чате" name="name in chat" value="Динка" }}
+                {{> InputField className="changeAll-page__input" title="Телефон" name="phone" value="8-925-111-11-11" }}
             </div>
-            <nav class="changeData-page__footer">
+            <nav class="changeAll-page__footer">
                 {{> Button text="Сохранить" page="chat" }}
                 {{> Link page="chat" text="Отменить"}}
             </nav>
