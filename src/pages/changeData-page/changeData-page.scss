@@ -4,11 +4,6 @@
   display: flex;
   flex-direction: column;
 
-  &__avatar-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-
   &__nickname {
     text-align: center;
     margin-top: 10px;
@@ -26,6 +21,44 @@
   &__footer {
     margin-top: 20px;
     text-align: center;
+  }
+
+  &__avatar-label {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+  }
+
+  &__avatar-input {
+    display: none;
+  }
+
+  &__avatar-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 30px;
+
+  }
+
+  .chat-page__profile-icon {
+    transform: scale(2.5);
+  }
+
+  &__avatar-text {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+  }
+
+  &__avatar-container:hover .changeData-page__avatar-text {
+    display: block;
   }
 
 }

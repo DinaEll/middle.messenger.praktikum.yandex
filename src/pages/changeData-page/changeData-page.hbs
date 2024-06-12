@@ -1,7 +1,11 @@
 {{#> Dialog }}
     <form class="changeData-page">
         <div class="changeData-page__avatar-container">
-            <img src="../assets/Птица-секретарь.png" alt="Профиль" class="chat-page__profile-icon" />
+            <label for="avatar-upload" class="changeData-page__avatar-label">
+                <img src="../assets/Птица-секретарь.png" alt="Профиль" class="chat-page__profile-icon" />
+                <span class="changeData-page__avatar-text">Изменить</span>
+            </label>
+            <input type="file" id="avatar-upload" class="changeData-page__avatar-input" accept="image/*">
         </div>
         <div class="changeData-page__nickname">
             <span class="chat-page__username">Динка</span>
