@@ -1,23 +1,35 @@
-import './index.css';
 import Handlebars from 'handlebars';
-import loginTemplate from './pages/authorization/login.hbs?raw';
+import * as Components from './components';
+import * as Pages from './pages';
 
-const mainSource = `
-  <h1>{{ message }}</h1>
-  <a href="/login" id="login-link">Перейти на страницу логина</a>
+const pages = {
+  'chat': [ Pages.ChatPage ],
+  'login': [ Pages.LoginPage ],
+  'registration': [ Pages.RegistrationPage ],
+  'errorNotFound': [ Pages.ErrorNotFoundPage ],
+  'errorInternalServer': [ Pages.ErrorInternalServerPage ],
+  'start': [ Pages.StartPage ],
 
-`;
-const mainTemplate = Handlebars.compile(mainSource);
+};
 
-const app = document.querySelector('#app');
-app.innerHTML = mainTemplate({ message: 'Привет, мир!' });
+Object.entries(Components).forEach(([ name, component ]) => {
+  Handlebars.registerPartial(name, component);
+});
 
-function showLoginPage() {
-    window.location.href = '/login';
-
+function navigate(page) {
+  const [ source, args ] = pages[page];
+  const handlebarsFunct = Handlebars.compile(source);
+  document.body.innerHTML = handlebarsFunct(args);
 }
 
-document.getElementById('login-link').addEventListener('click', (event) => {
-    event.preventDefault();
-    showLoginPage();
+document.addEventListener('DOMContentLoaded', () => navigate('start'));
+
+document.addEventListener('click', e => {
+  const page = e.target.getAttribute('page');
+  if (page) {
+    navigate(page);
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  }
 });

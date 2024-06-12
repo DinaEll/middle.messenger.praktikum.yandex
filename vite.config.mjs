@@ -1,21 +1,13 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import handlebars from 'vite-plugin-handlebars';
+
 export default defineConfig({
-    root: 'src',
+    root: resolve(__dirname, 'src'),
     server: {
         port: 3000,
     },
     build: {
-        outDir: '../dist',
+        outDir: resolve(__dirname, 'dist'),
     },
-    plugins: [
-        handlebars({
-            partialDirectory: './src',
-        }),
-    ],
-    assetsInclude: ['**/*.hbs']
 });
-
-
-
 
