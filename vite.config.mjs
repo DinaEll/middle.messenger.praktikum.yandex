@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
-// import path from 'path';
 export default defineConfig({
     root: 'src',
     server: {
@@ -12,10 +11,9 @@ export default defineConfig({
     plugins: [
         handlebars({
             partialDirectory: './src',
-            //А в чем разница между этим и этим вариантами
-            // partialDirectory: path.resolve(__dirname, 'partials'),
         }),
     ],
+    assetsInclude: ['**/*.hbs']
 });
 
 

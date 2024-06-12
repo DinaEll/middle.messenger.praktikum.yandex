@@ -10,7 +10,14 @@
   },
   "devDependencies": {
     "handlebars": "^4.7.8",
+    "postcss-cli": "^11.0.0",
     "vite": "^5.2.0",
     "vite-plugin-handlebars": "^2.0.0"
+  },
+  "dependencies": {
+    "postcss": "^8.4.38",
+    "postcss-import": "^16.1.0",
+    "postcss-normalize": "^10.0.1",
+    "postcss-preset-env": "^9.5.14"
   }
 }
