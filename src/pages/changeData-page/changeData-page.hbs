@@ -1,0 +1,20 @@
+{{#> Dialog }}
+  <form class="changeData-page">
+    <div class="changeData-page__content">
+      {{> PageTitle title="Изменить данные пользователя" }}
+      {{> InputField className="changeData-page__input" title="Почта" name="email" }}
+      {{> InputField className="changeData-page__input" title="Логин" name="login" }}
+      {{> InputField className="changeData-page__input" title="Имя" name="name"}}
+      {{> InputField className="changeData-page__input" title="Фамилия" name="surname" }}
+      {{> InputField className="changeData-page__input" title="Имя в чате" name="name in chat" }}
+      {{> InputField className="changeData-page__input" title="Телефон" name="phone"}}
+
+    </div>
+    <div class="changeData-page__footer">
+      {{> Link page="chat" text="Изменить данные"}}
+      {{> Link page="chat" text="Изменить пароль"}}
+      {{> Link page="start" text="Выйти"}}
+
+    </div>
+  </form>
+{{/ Dialog }}

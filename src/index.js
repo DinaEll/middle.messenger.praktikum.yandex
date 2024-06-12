@@ -9,6 +9,7 @@ const pages = {
   'errorNotFound': [ Pages.ErrorNotFoundPage ],
   'errorInternalServer': [ Pages.ErrorInternalServerPage ],
   'start': [ Pages.StartPage ],
+  'changeData': [ Pages.ChangeDataPage ],
 
 };
 
