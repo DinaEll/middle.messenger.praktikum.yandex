@@ -1,16 +1,14 @@
-{{#> Dialog }}
-    <main>
-        <form class="login-page">
-            <div class="login-page__content">
-                {{> PageTitle title="Вход" }}
-                {{> InputField className="login-page__input" title="Логин" name="login" }}
-                {{> InputField className="login-page__input" title="Пароль" name="password" type="password" }}
-            </div>
-            <nav class="login-page__footer">
-                {{> Button text="Авторизоваться" page="chat" }}
-                {{> Link page="registration" text="Нет аккаунта?"}}
-                {{> Link page="start" text="Вернуться на стартовую страничку"}}
-            </nav>
-        </form>
-    </main>
-{{/ Dialog }}
+<main>
+    <form class="login-page">
+        <div class="login-page__content">
+            {{> PageTitle title="Вход" }}
+            {{> InputField className="login-page__input" title="Логин" name="login" }}
+            {{> InputField className="login-page__input" title="Пароль" name="password" type="password" }}
+        </div>
+        <nav class="login-page__footer">
+            {{> Button text="Авторизоваться" page="chat" }}
+            {{> Link page="registration" text="Нет аккаунта?"}}
+            {{> Link page="start" text="Вернуться на стартовую страничку"}}
+        </nav>
+    </form>
+</main>
