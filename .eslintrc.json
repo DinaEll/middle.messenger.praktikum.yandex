@@ -1,0 +1,56 @@
+{
+  "plugins": ["@typescript-eslint", "prettier", "unicorn",  "simple-import-sort"],
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb-base", "plugin:unicorn/recommended", "plugin:prettier/recommended", "prettier"],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-named-default": "off",
+    "import/no-extraneous-dependencies": "off",
+
+    "unicorn/no-array-for-each": "off",
+    "unicorn/filename-case": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "unicorn/prefer-ternary": "off",
+    "unicorn/no-null": "warn",
+
+    "no-undef": "off",
+    "no-restricted-syntax":"off",
+    "no-else-return": "off",
+    "no-param-reassign": ["error", { "props": false }],
+
+    "class-methods-use-this": "off",
+    "prefer-promise-reject-errors": "off",
+    "guard-for-in": "off",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^\\u0000"],
+          ["^"],
+          ["^Widgets"],
+          ["^Features"],
+          ["^Entities"],
+          ["^Shared"],
+          ["^services"],
+          ["(?!\\./styles\\.module\\.scss$)(\\./.*)"],
+          ["^\\."]
+        ]
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-shadow": ["warn", { "builtinGlobals": false, "hoist": "functions", "allow": [], "ignoreOnInitialization": false }],
+    "camelcase": "warn"
+  }
+}

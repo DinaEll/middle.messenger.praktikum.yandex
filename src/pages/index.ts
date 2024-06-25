@@ -1,9 +1,9 @@
+export { ChangeDataPage } from './changeData-page/index';
+export { ChangePasswordPage } from './changePassword-page/index';
 export { ChatPage } from './chat-page/index';
+export { ErrorInternalServerPage } from './errorInternalServer-page/index';
+export { ErrorNotFoundPage } from './errorNotFound-page/index';
 export { LoginPage } from './login-page/index';
 export { RegistrationPage } from './registration-page/index';
-export { ErrorNotFoundPage } from './errorNotFound-page/index';
-export { ErrorInternalServerPage } from './errorInternalServer-page/index';
 export { StartPage } from './start-page/index';
-export { ChangeDataPage } from './changeData-page/index';
 export { UserPage } from './user-page/index';
-export { ChangePasswordPage } from './changePassword-page/index';

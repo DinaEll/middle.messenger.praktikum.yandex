@@ -16,3 +16,7 @@ https://github.com/DinaEll/middle.messenger.praktikum.yandex
 Все актуальные страницы перечислены на стартовой странице чата  
 https://deploy--darling-cendol-394045.netlify.app/
 
+Новые команды на тест
+
+- `npm run lint` — для проверки кода
+- `npm run lint -- --fix` — для автоматического исправления ошибок
