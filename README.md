@@ -20,3 +20,7 @@ https://deploy--darling-cendol-394045.netlify.app/
 
 - `npm run lint` — для проверки кода
 - `npm run lint -- --fix` — для автоматического исправления ошибок
+
+
+- `npm run lint:css` — для проверки стилей
+- `npm run lint:css:fix` — для исправления стилей
