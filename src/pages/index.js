@@ -1,0 +1,9 @@
+export { ChatPage } from './chat-page';
+export { LoginPage } from './login-page';
+export { RegistrationPage } from './registration-page';
+export { ErrorNotFoundPage } from './errorNotFound-page';
+export { ErrorInternalServerPage } from './errorInternalServer-page';
+export { StartPage } from './start-page';
+export { ChangeDataPage } from './changeData-page';
+export { UserPage } from './user-page';
+export { ChangePasswordPage } from './changePassword-page';
