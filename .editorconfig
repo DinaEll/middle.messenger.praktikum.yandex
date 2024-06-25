@@ -1,0 +1,19 @@
+# EditorConfig  поддерживает единый стиль кодирования для различных редакторов и IDE
+root = true
+
+[*]
+charset = utf-8
+#конечные переводы строк
+end_of_line = lf
+#новая строка в конце каждого файла
+insert_final_newline = true
+#удаление пробелов в конце строк
+trim_trailing_whitespace = true
+#отступы
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+[*.md]
+trim_trailing_whitespace = false
+
