@@ -1,5 +1,6 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
 
 export default defineConfig({
     root: resolve(__dirname, 'src'),
@@ -9,5 +10,11 @@ export default defineConfig({
     build: {
         outDir: resolve(__dirname, 'dist'),
     },
+    plugins: [
+        checker({
+            typescript: {
+                tsconfigPath: resolve(__dirname, 'tsconfig.json')
+            }
+        })
+    ],
 });
-
