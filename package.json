@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.8",
+    "@types/uuid": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "6.18.0",
     "@typescript-eslint/parser": "6.18.0",
     "@vitejs/plugin-vue": "^5.0.5",
@@ -47,10 +48,13 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "cssnano": "^7.0.3",
     "express": "^4.19.2",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
     "postcss-normalize": "^10.0.1",
-    "postcss-preset-env": "^9.5.14"
+    "postcss-preset-env": "^9.5.14",
+    "uuid": "^10.0.0"
   }
 }
