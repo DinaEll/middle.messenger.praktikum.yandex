@@ -24,3 +24,8 @@ https://deploy--darling-cendol-394045.netlify.app/
 
 - `npm run lint:css` — для проверки стилей
 - `npm run lint:css:fix` — для исправления стилей
+
+
+### Используемые ресурсы:  
+Иконки:  
+https://fonts.google.com/icons
