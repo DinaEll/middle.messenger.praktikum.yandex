@@ -1,0 +1,26 @@
+<main>
+    <form class="change-all-page">
+        <div class="change_all-page__avatar-container">
+            <label for="avatar-upload" class="change_all-page__avatar-label">
+                <img src="../assets/Птица-секретарь.png" alt="Профиль" class="chat-page-profile-icon"/>
+                <span class="change_all-page__avatar-text">Изменить</span>
+            </label>
+            <input type="file" id="avatar-upload" name="avatar" class="change_all-page__avatar-input" accept="image/*">
+        </div>
+        <div class="change_all-page__nickname">
+            <span class="chat-page__username">Динка</span>
+        </div>
+        <div class="change_all-page__content">
+            {{> InputField className="change_all-page__input" title="Почта" name="email" value="example@example.com" }}
+            {{> InputField className="change_all-page__input" title="Логин" name="login" value="example_login" }}
+            {{> InputField className="change_all-page__input" title="Имя" name="first_name" value="Дина" }}
+            {{> InputField className="change_all-page__input" title="Фамилия" name="second_name" value="Пупина" }}
+            {{> InputField className="change_all-page__input" title="Имя в чате" name="display_name" value="Динка" }}
+            {{> InputField className="change_all-page__input" title="Телефон" name="phone" value="8-925-111-11-11" }}
+        </div>
+        <nav class="change_all-page__footer">
+            {{> Button text="Сохранить" page="chat" }}
+            {{> Link page="chat" text="Отменить"}}
+        </nav>
+    </form>
+</main>

@@ -1,0 +1,65 @@
+.change-all-page {
+  width: 280px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+
+  &__nickname {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  &__content {
+    flex: 1;
+    margin-top: 20px;
+  }
+
+  &__input {
+    margin-top: 16px;
+  }
+
+  &__footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__avatar-label {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+  }
+
+  &__avatar-input {
+    display: none;
+  }
+
+  &__avatar-container {
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 30px;
+
+  }
+
+  .chat-page-profile-icon {
+    transform: scale(2.5);
+  }
+
+  &__avatar-text {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+  }
+
+  &__avatar-container:hover .change-data-page-avatar-text {
+    display: block;
+  }
+
+}
