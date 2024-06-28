@@ -1,24 +1,24 @@
 <main>
-    <form class="changeAll-page">
-        <div class="changeAll-page__avatar-container">
-            <label for="avatar-upload" class="changeAll-page__avatar-label">
+    <form class="change_all-page">
+        <div class="change_all-page__avatar-container">
+            <label for="avatar-upload" class="change_all-page__avatar-label">
                 <img src="../assets/Птица-секретарь.png" alt="Профиль" class="chat-page__profile-icon"/>
-                <span class="changeAll-page__avatar-text">Изменить</span>
+                <span class="change_all-page__avatar-text">Изменить</span>
             </label>
-            <input type="file" id="avatar-upload" name="avatar" class="changeAll-page__avatar-input" accept="image/*">
+            <input type="file" id="avatar-upload" name="avatar" class="change_all-page__avatar-input" accept="image/*">
         </div>
-        <div class="changeAll-page__nickname">
+        <div class="change_all-page__nickname">
             <span class="chat-page__username">Динка</span>
         </div>
-        <div class="changeAll-page__content">
-            {{> InputField className="changeAll-page__input" title="Почта" name="email" value="example@example.com" }}
-            {{> InputField className="changeAll-page__input" title="Логин" name="login" value="example_login" }}
-            {{> InputField className="changeAll-page__input" title="Имя" name="first_name" value="Дина" }}
-            {{> InputField className="changeAll-page__input" title="Фамилия" name="second_name" value="Пупина" }}
-            {{> InputField className="changeAll-page__input" title="Имя в чате" name="display_name" value="Динка" }}
-            {{> InputField className="changeAll-page__input" title="Телефон" name="phone" value="8-925-111-11-11" }}
+        <div class="change_all-page__content">
+            {{> InputField className="change_all-page__input" title="Почта" name="email" value="example@example.com" }}
+            {{> InputField className="change_all-page__input" title="Логин" name="login" value="example_login" }}
+            {{> InputField className="change_all-page__input" title="Имя" name="first_name" value="Дина" }}
+            {{> InputField className="change_all-page__input" title="Фамилия" name="second_name" value="Пупина" }}
+            {{> InputField className="change_all-page__input" title="Имя в чате" name="display_name" value="Динка" }}
+            {{> InputField className="change_all-page__input" title="Телефон" name="phone" value="8-925-111-11-11" }}
         </div>
-        <nav class="changeAll-page__footer">
+        <nav class="change_all-page__footer">
             {{> Button text="Сохранить" page="chat" }}
             {{> Link page="chat" text="Отменить"}}
         </nav>
