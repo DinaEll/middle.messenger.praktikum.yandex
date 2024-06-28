@@ -1,11 +1,11 @@
 import {IProps,Block} from "../../utils/Block";
 
-export interface IPageRegistrationProps extends IProps {
+export interface IRegistrationPage extends IProps {
     onLogin:(event:Event)=>void,
 }
-export class PageRegistration extends Block {
+export class RegistrationPage extends Block {
     constructor() {
-        const props:IPageRegistrationProps={
+        const props:IRegistrationPage={
             events:{},
             onLogin:  (event: Event) => {
                 event.preventDefault();

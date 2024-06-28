@@ -1,9 +1,10 @@
-export { ChangeDataPage } from './changeData-page/index';
-export { ChangePasswordPage } from './changePassword-page/index';
-export { ChatPage } from './chat-page/index';
-export { ErrorInternalServerPage } from './errorInternalServer-page/index';
-export { ErrorNotFoundPage } from './errorNotFound-page/index';
-export { LoginPage } from './login-page/index';
-export { RegistrationPage } from './registration-page/index';
-export { StartPage } from './start-page/index';
-export { UserPage } from './user-page/index';
+export {default as RegistrationPage} from './registration';
+export {default as ChangeData} from './changeData';
+export {default as PageProfile} from './user-page';
+export {default as ChangePassword} from './changePassword';
+export {default as ChatPage} from './chat-page';
+export {default as ErrorInternalServer} from './errorInternalServer';
+export {default as ErrorNotFound} from './errorNotFound';
+export {default as StartPage} from './start-page';
+export {default as LoginPage} from './login';
+

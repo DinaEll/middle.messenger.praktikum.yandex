@@ -11,7 +11,7 @@ export class StartPage extends Block {
             <div class="container container-center">
                 <div class="">
                     {{{Link caption="Авторизация"  type='success' page="login" }}}
-                    {{{Link caption="Регистрация"  type='success' page="pageRegistration" }}}
+                    {{{Link caption="Регистрация"  type='success' page="registrationPage" }}}
                     {{{Link caption="Посмотреть страничку пользователя"  type='success' page="pageProfile" }}}
                     {{{Link caption="Изменить страничку пользователя"  type='success' page="changeData" }}}
                     {{{Link caption="Изменить пароль пользователя"  type='success' page="changePassword" }}}

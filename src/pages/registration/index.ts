@@ -1,2 +1,2 @@
-export {PageRegistration as default} from './registration';
+export {RegistrationPage as default} from './registration';
 

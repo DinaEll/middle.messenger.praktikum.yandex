@@ -1,7 +1,7 @@
 import {IProps,Block} from "../../utils/Block";
 import {mockUser} from "../../mocks/user-profile.mocks";
 import {IUser} from "../../modelsInterface/IUser";
-import {IPageProfileProps} from "../profile/profile";
+import {IPageProfileProps} from "../user-page/user-page";
 
 export interface IChangeData extends IProps {
     onChange:(event:Event)=>void,
