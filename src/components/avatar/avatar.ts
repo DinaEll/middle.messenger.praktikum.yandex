@@ -24,7 +24,7 @@ export class Avatar extends Block {
                     <img src='${imageUrl}' alt="image avatar" class="avatar__image"/>` : ``}
                 ${isLoadAvatar ? `
                     <div class="avatar__hover">
-                        <div class="avatar__hover__text">Load New Avatar</div>
+                        <div class="avatar__hover__text">Поменять аватар</div>
                     </div>` : ""}
             </div>`)
     }

@@ -16,10 +16,6 @@ interface IFormAuthProps extends IProps {
 export class FormAuth extends Block {
     constructor(props:IFormAuthProps) {
         props.validate= ALL_VALIDATE_FIELDS;
-        /*props.onClickOk={
-            console.log('OK');
-            props.onClickOkButton(event)
-        }*/
         super(props);
     }
 
