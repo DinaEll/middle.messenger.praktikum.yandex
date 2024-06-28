@@ -21,13 +21,13 @@ export class Modal extends Block {
         return (`
             <form class="modal-background">
                 <div class="modal container-shadow ">
-                    <h2 class="modal__header">
+                    <h2 class="modal-header">
                         ${caption}
                     </h2>
                     <div>
-                       
+
                     </div>
-                    <div class="modal__footer">
+                    <div class="modal-footer">
                          {{{ Button caption="${okText}" onClick=okClick }}}
                         {{{ Button caption="${cancelText}" onClick=cancelClick }}}
                     </div>

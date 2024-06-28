@@ -15,12 +15,12 @@ html, body {
   overflow-x: hidden;
 }
 
-.chat-page__left {
+.chat-page-left {
   grid-area: chat-page__left;
   max-width: 350px;
 }
 
-.chat-page__main {
+.chat-page-main {
   grid-area: chat-page__main;
 }
 

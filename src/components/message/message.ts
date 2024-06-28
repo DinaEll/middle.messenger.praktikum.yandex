@@ -19,14 +19,14 @@ export class Message extends Block {
         return (`
             <li class="message  ${myMessage?' message-my':''}">
                ${message.file?`
-                    <article class="message__file">
+                    <article class="message-file">
                         <img src=${message.file.path} alt="included_file"/>
-                        <div class="message__time">
+                        <div class="message-time">
                             {{{ Badge text="01.20" type="primary" }}}
                         </div>
-                    </article>`:`<article class="message__text">
+                    </article>`:`<article class="message-text">
                         <p>${message.content}</p>
-                        <div class="message__time">
+                        <div class="message-time">
                             {{{Badge text="01.20" }}}
                         </div>
                     </article>`

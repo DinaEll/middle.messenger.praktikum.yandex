@@ -9,7 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts --ext .js",
-    "lint:css": "stylelint '**/*.css'",
+    "lint:css": "stylelint '**/*.css' '**/*.scss'",
     "lint:css:fix": "stylelint '**/*.css' --fix"
   },
   "engines": {

@@ -6,7 +6,7 @@
     min-width: 290px;
     display: block;
 
-    .input-search__label {
+    .input-search-label {
         content: "Search...";
         color: var(--gray-light);
         position: absolute;
@@ -24,7 +24,7 @@
         height: 20px;
     }
 
-    .input-search__value {
+    .input-search-value {
         display: flex;
         height: 38px;
         flex-direction: column;

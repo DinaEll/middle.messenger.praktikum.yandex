@@ -1,13 +1,9 @@
-.change_all-page {
+.change-all-page {
   width: 280px;
   height: auto;
   display: flex;
   flex-direction: column;
 
-  &__avatar-container {
-    text-align: center;
-    margin-top: 20px;
-  }
 
   &__nickname {
     text-align: center;
@@ -46,7 +42,7 @@
 
   }
 
-  .chat-page__profile-icon {
+  .chat-page-profile-icon {
     transform: scale(2.5);
   }
 
@@ -56,13 +52,13 @@
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 70%);
     padding: 5px 10px;
     color: white;
     border-radius: 5px;
   }
 
-  &__avatar-container:hover .changeData-page__avatar-text {
+  &__avatar-container:hover .change-data-page-avatar-text {
     display: block;
   }
 

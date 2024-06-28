@@ -26,13 +26,13 @@ export class ChatList extends Block {
 
         return (`
             <div class="chat-list">
-                <nav class="chat-list__header">
+                <nav class="chat-list-header">
                     {{{Link caption="Профиль" page="pageProfile"  linkIcon=true }}}
                 </nav>
-                <div class="chat-list__search">
+                <div class="chat-list-search">
                     {{{ InputSearch }}}
                 </div>
-                <ul class="chat-list__chats">
+                <ul class="chat-list-chats">
                     ${this.getChats(list)}
                 </ul>
             </div>

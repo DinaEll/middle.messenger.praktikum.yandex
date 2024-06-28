@@ -26,10 +26,10 @@ export class ChatPage extends Block {
     protected render(): string {
         return (`
            <div class="chat-page">
-                <div class="chat-page__left">
+                <div class="chat-page-left">
                     {{{ ChatList list=chatList }}}
                 </div>
-                <div class="chat-page__main">
+                <div class="chat-page-main">
                     {{{ MessageList messageList=messageList currentUser=currentUser }}}
                 </div>
             </div>

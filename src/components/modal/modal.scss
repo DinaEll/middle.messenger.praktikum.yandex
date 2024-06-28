@@ -8,12 +8,12 @@
     width: 340px;
     z-index: 100;
 
-    .modal__header {
+    .modal-header {
         text-align: center;
         font-size: 1.5em;
     }
 
-    .modal__footer {
+    .modal-footer {
         display: flex;
         flex-direction: column;
         align-items: center;

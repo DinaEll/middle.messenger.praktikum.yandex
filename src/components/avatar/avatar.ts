@@ -21,10 +21,10 @@ export class Avatar extends Block {
         return (`
             <div class="avatar ${size}">
                 ${imageUrl ? `
-                    <img src='${imageUrl}' alt="image avatar" class="avatar__image"/>` : ``}
+                    <img src='${imageUrl}' alt="image avatar" class="avatar-image"/>` : ``}
                 ${isLoadAvatar ? `
-                    <div class="avatar__hover">
-                        <div class="avatar__hover__text">Поменять аватар</div>
+                    <div class="avatar-hover">
+                        <div class="avatar-hover-text">Поменять аватар</div>
                     </div>` : ""}
             </div>`)
     }

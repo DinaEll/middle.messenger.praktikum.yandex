@@ -28,20 +28,20 @@ export class FormProfile extends Block {
         return(`
 
         <div class="profile">
-            <div class="profile__avatar">
+            <div class="profile-avatar">
                 {{{ Avatar image=${avatar} isLoadAvatar=true }}}
-                <h2 class="profile__avatar__name">${first_name} ${second_name}</h2>
+                <h2 class="profile-avatar-name">${first_name} ${second_name}</h2>
             </div>
             ${user ?
-            `<div class = "profile__main" >
+          `<div class = "profile-main" >
                 ${children}
-            </div>`:''
-            }
+            </div>` : ''
+        }
              ${withButton ?
-                `<div class="profile__button">
+          `<div class="profile__button">
                     {{{ Button caption="${buttonText}" onClick=onClickOkButton }}}
-                </div>`:
-                `<div class="profile__buttons">
+                </div>` :
+          `<div class="profile-buttons">
                     {{{Link caption="Изменить профиль пользователя" page="changeData" type='success' linkLine=true  }}}
                     {{{Link caption="Изменить пароль" page="changePassword" type='success' linkLine=true  }}}
                     {{{Link caption="Выход" page="startPage" type='danger' }}}

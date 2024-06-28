@@ -49,7 +49,7 @@ export class MessageList extends Block {
         return list.map(message=>{
             const messageBlock=new Message({message:message,myMessage:message.main||false} as IMessageProps)
             return(`
-            <div class="message-list__main__message">
+            <div class="message-list-main-message">
                 ${messageBlock.renderForList()}
                 </div>
             `)
@@ -60,17 +60,17 @@ export class MessageList extends Block {
         const {avatar,display_name}=currentUser;
         return (`
            <div class="message-list">
-                <div class="message-list__header">
-                    <div class="message-list__header__avatar">
+                <div class="message-list-header">
+                    <div class="message-list-header-avatar">
                         {{{ Avatar image=${avatar} size='sm'}}}
                         <span>${display_name}</span>
                     </div>
                     {{{ Button type="dots"}}}
                 </div>
-                <ul class="message-list__main">
+                <ul class="message-list-main">
                     ${this.getListMessages(messageList)}
                 </ul>
-                <div class="message-list__footer">
+                <div class="message-list-footer">
                     {{{ Button type="paperclip"}}}
                     {{{ Input
                         ref="message"

@@ -1,10 +1,10 @@
 <div class="profile">
-    <div class="profile__avatar">
+    <div class="profile-avatar">
         {{> Avatar image=user.image isLoadAvatar=true}}
-        <h2 class="profile__avatar__name">{{user.firstName}} {{user.lastName}}</h2>
+        <h2 class="profile-avatar-name">{{user.firstName}} {{user.lastName}}</h2>
     </div>
     {{#with user}}
-        <div class="profile__main">
+        <div class="profile-main">
             {{> @partial-block }}
         </div>
     {{/with}}
@@ -13,7 +13,7 @@
             {{> Button caption=button-text page=button-page }}
         </div>
     {{else}}
-        <div class="profile__buttons">
+        <div class="profile-buttons">
             {{>Link caption="Change IUser Data" page="changeData" type='success' linkLine=true  }}
             {{>Link caption="Change Password" page="changePassword" type='success' linkLine=true  }}
             {{>Link caption="Cancel" page=button-page type='danger' }}

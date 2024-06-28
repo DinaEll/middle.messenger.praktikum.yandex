@@ -1,14 +1,14 @@
 .input {
     padding: 10px;
 
-    .input__container {
+    .input-container {
         display: flex;
         height: 38px;
         flex-direction: column;
         align-content: flex-end;
     }
 
-    .input__label {
+    .input-label {
         transform: translateY(-21px);
         color: var(--gray-light);
         font-size: 13px;
@@ -19,7 +19,7 @@
                 transform 0.5s;
     }
 
-    .input__value {
+    .input-value {
         border: none;
         border-bottom: 1px solid var(--gray-light);
         font-size: 13px;
@@ -31,14 +31,14 @@
             outline: none;
         }
 
-        &:not(:placeholder-shown) + .input__label,
-        &:focus + .input__label {
+        &:not(:placeholder-shown) + .input-label,
+        &:focus + .input-label {
             transform: translateY(-36px);
             font-size: 9px;
         }
     }
 
-    .input__text-error {
+    .input-text-error {
         transform: translateY(-7px);
         color: var(--blue);
         font-size: 8px;
@@ -48,11 +48,11 @@
     }
 
 
-    .input__error .input__text-error {
+    .input-error .input-text-error {
         display: block;
     }
 
-    .input__value-error {
+    .input-value-error {
         color: var(--blue);
     }
 }

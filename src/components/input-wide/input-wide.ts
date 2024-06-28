@@ -68,23 +68,23 @@ export class InputWide extends Block {
 
         return (`
             <div class="input-wide">
-                <label class="input-wide__container
-                 ${noLine ? `input-wide__container-noline` : ""}">
-                    <div class="input-wide__label"><span>${label}</span></div>
-                    ${readOnly ? `<span class="input-wide__text">${value}</span>` : ""}
-                     {{{ Input 
-                            ref='input' 
-                            type="${type}" 
-                            classes="input-wide__value ${error ? "input__value-error" : ""}
-                                    ${readOnly ? "input__value-disabled" : ""}" 
+                <label class="input-wide-container
+                 ${noLine ? `input-wide-container-noline` : ""}">
+                    <div class="input-wide-label"><span>${label}</span></div>
+                    ${readOnly ? `<span class="input-wide-text">${value}</span>` : ""}
+                     {{{ Input
+                            ref='input'
+                            type="${type}"
+                            classes="input-wide-value ${error ? "input__value-error" : ""}
+                                    ${readOnly ? "input__value-disabled" : ""}"
                             value='${value}'
-                            placeholder=" " 
+                            placeholder=" "
                             name="${name}"
                             onBlur=onBlur
                      }}}
                 </label>
-                 ${error ? ` <div class="input-wide__error">
-                            <div class="input-wide__text-error">${errorText}</div>
+                 ${error ? ` <div class="input-wide-error">
+                            <div class="input-wide-text-error">${errorText}</div>
                         </div>` : ""}
             </div>
         `)

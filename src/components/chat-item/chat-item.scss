@@ -12,30 +12,30 @@
 
 }
 
-.chat-item__avatar {
+.chat-item-avatar {
     grid-area: a;
     display: flex;
     align-items: center;
 }
 
-.chat-item__caption {
+.chat-item-caption {
     grid-area: b;
     display: flex;
     justify-content: space-between;
     width: 100%;
 
-    .chat-item__caption__name {
+    .chat-item-caption-name {
         font-weight: bold;
     }
 }
 
-.chat-item__message {
+.chat-item-message {
     grid-area: c;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
-    .chat-item__message__content p {
+    .chat-item-message-content p {
         color: var(--gray-light);
         width: 200px;
         margin: 0;

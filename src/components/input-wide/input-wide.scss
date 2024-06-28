@@ -1,5 +1,5 @@
 .input-wide {
-    .input-wide__container {
+    .input-wide-container {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -9,18 +9,18 @@
         padding:5px 0;
     }
 
-    .input-wide__container-noline{
+    .input-wide-container-noline{
         border-bottom:none;
     }
 
-    .input-wide__label {
+    .input-wide-label {
         color: var(--gray-dark);
         font-weight: 500;
         user-select: none;
         min-width: auto;
     }
 
-    .input-wide__value {
+    .input-wide-value {
         border: none;
         color: var(--gray-light);
         text-align: end;
@@ -32,12 +32,12 @@
 
     }
 
-    .input-wide__text{
+    .input-wide-text{
         color: var(--gray-light);
         display: block;
     }
 
-    .input-wide__text-error {
+    .input-wide-text-error {
         color: var(--blue);
         font-size: 11px;
         font-weight: 400;
@@ -45,11 +45,11 @@
         margin-top:5px;
     }
 
-    .input__value-error {
+    .input-value-error {
         color: var(--blue);
     }
 
-    .input__value-disabled{
+    .input-value-disabled{
         display: none;
     }
 }

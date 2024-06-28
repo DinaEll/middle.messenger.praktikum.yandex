@@ -58,20 +58,20 @@ export class InputShort extends Block {
 
         return (`
             <div class="input">
-                <label class="input__container">
-                {{{ Input 
+                <label class="input-container">
+                {{{ Input
                     ref="${ref}"
-                    type="${type}" 
-                    classes="input__value  ${error ? "input__value-error" : ""}" 
+                    type="${type}"
+                    classes="input__value  ${error ? "input__value-error" : ""}"
                     value='${value}'
-                    placeholder=" " 
+                    placeholder=" "
                     name="${ref}"
                     onBlur=onBlur
                 }}}
-                    
-                    <div class="input__label">${label}</div>
-                    ${error ? ` <div class="input__error">
-                            <div class="input__text-error">${errorText}</div>
+
+                    <div class="input-label">${label}</div>
+                    ${error ? ` <div class="input-error">
+                            <div class="input-text-error">${errorText}</div>
                         </div>` : ""
         }
                 </label>

@@ -26,7 +26,7 @@ export class InputSearch extends Block {
 
         return (`
            <label class="input-search">
-                <span class="input-search__label">Search...</span>
+                <span class="input-search-label">Search...</span>
                 {{{ Input
                     ref='input'
                     type="text"

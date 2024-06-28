@@ -23,13 +23,13 @@ export class FormAuth extends Block {
         const {caption='Login',children='',onClickCancelButton,captionOk,captionCancel,pageCancel}=this._props as IFormAuthProps;
         return(`
             <div class="container-form container-shadow">
-            <h2 class="container-form__header">
+            <h2 class="container-form-header">
                 ${caption}
             </h2>
             <div>
                 ${children}
             </div>
-            <div class="container-form__buttons">
+            <div class="container-form-buttons">
                 {{{ Button caption="${captionOk}"  onClick=onClickOkButton }}}
                 {{{ Link caption="${captionCancel}" page="${pageCancel}" onClick=${onClickCancelButton} }}}
             </div>

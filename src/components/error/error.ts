@@ -14,10 +14,10 @@ export class Error extends Block {
         const { errorNumber='',pageGoBack='startPage',errorText=''} = this._props as IErrorProps;
         return (`
             <div class="error">
-                <h1 class="error__number">${errorNumber}</h1>
-                <h2 class="error__text">
+                <h1 class="error-number">${errorNumber}</h1>
+                <h2 class="error-text">
                 </h2>
-                <h2 class="error__text">
+                <h2 class="error-text">
                    ${errorText}
                 </h2>
                 {{{ Link page='${pageGoBack}' caption='На стартовую страничку'  }}}
