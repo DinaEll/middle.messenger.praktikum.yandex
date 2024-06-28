@@ -4,13 +4,20 @@
     "es2021": true
   },
   "extends": [
-    "stylelint-config-standard"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
   ],
   "rules": {
     "import-notation": null,
     "selector-class-pattern": null
-  },
-  "plugins": [
-    "@typescript-eslint"
-  ]
+  }
 }
+
