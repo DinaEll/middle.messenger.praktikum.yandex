@@ -8,7 +8,7 @@ export class ErrorInternalServer extends Block {
    protected render(): string {
         return (`
             <div class="container container-center">
-                {{{ Error errorNumber="500" errorText="Мы уже фиксим" page="pageChat" }}}
+                {{{ Error errorNumber="500" errorText="Мы уже фиксим" page="chatPage" }}}
             </div>`)
     }
 }

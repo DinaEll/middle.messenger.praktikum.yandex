@@ -8,7 +8,7 @@ export class ErrorNotFound extends Block {
    protected render(): string {
         return (`
             <div class="container container-center">
-                {{{ Error errorNumber="404" errorText="Не туда попали" page="pageChat" }}}
+                {{{ Error errorNumber="404" errorText="Не туда попали" page="chatPage" }}}
             </div>`)
     }
 }
