@@ -28,4 +28,4 @@ https://deploy--darling-cendol-394045.netlify.app/
 
 ### Используемые ресурсы:  
 Иконки:  
-https://fonts.google.com/icons
+https://fonts.google.com/icons 
