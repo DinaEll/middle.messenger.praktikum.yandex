@@ -1,3 +1,1 @@
-import '../../assets/changeAll-page.scss';
-
-export { default as UserPage } from './user-page.hbs?raw';
+export {PageProfile as default} from './user-page';
