@@ -16,8 +16,8 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "import-notation": null,
-    "selector-class-pattern": null
+    "import-notation": 1, //0 для отключения, 1 для предупреждений и 2 для ошибок
+    "selector-class-pattern": 1
   }
 }
 
