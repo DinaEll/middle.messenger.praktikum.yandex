@@ -1,3 +1,3 @@
 import './button.scss';
+export { Button as default } from './button';
 
-export { default as Button } from './button.hbs?raw';

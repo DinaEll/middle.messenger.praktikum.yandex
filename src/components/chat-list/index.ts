@@ -1,3 +1,4 @@
 import './chat-list.scss';
+export { ChatList as default } from './chat-list';
 
-export { default as ChatList } from './chat-list.hbs?raw';
+

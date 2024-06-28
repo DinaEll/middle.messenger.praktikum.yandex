@@ -1,3 +1,4 @@
 import './link.scss';
+export { Link as default } from './link';
 
-export { default as Link } from './link.hbs?raw';
+
