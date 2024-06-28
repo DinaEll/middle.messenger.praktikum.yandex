@@ -1,3 +1,2 @@
-import '../../assets/changeAll-page.scss';
+export { ChangePassword as default} from './changePassword-page';
 
-export { default as ChangePasswordPage } from './changePassword-page.hbs?raw';
