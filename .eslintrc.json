@@ -14,10 +14,6 @@
   },
   "plugins": [
     "@typescript-eslint"
-  ],
-  "rules": {
-    "import-notation": 1, //0 для отключения, 1 для предупреждений, 2 для ошибок
-    "selector-class-pattern": 1
-  }
+  ]
 }
 
