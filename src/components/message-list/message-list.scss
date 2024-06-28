@@ -28,7 +28,7 @@
     .message-list-main {
         display: flex;
         flex-direction: column;
-        overflow-y: auto;
+        overflow: auto;
         padding: 20px 0;
         margin-bottom:20px;
         height: 100%;
