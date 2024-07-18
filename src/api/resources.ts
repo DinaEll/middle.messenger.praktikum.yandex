@@ -1,4 +1,4 @@
-import HTTPTransport from "../core/Http";
+import HTTPTransport from "../core/http";
 
 export class ResourcesApi {
     private httpTransport = new HTTPTransport();
