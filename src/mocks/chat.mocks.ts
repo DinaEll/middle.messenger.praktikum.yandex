@@ -1,4 +1,5 @@
 import {IChat} from "../modelsInterface/IChat";
+
 export const firstChat: IChat = {
   id: 1,
   title: "Daddy",
