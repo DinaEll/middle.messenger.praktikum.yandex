@@ -1,11 +1,11 @@
-import {IProps, Block} from "../../data/block.ts";
-import {IChatMessage} from "../../modelsInterface/IChatMessage.ts";
-import {IUser} from "../../modelsInterface/IUser.ts";
-import {Message} from "../index.ts";
-import {IMessageProps} from "../message/message.ts";
-import {IChat} from "../../modelsInterface/IChat.ts";
-import {StoreEvents} from "../../data/store.ts";
-import {getUserName} from "../../utils/user.utils.ts";
+import {IProps, Block} from "../../data/block";
+import {IChatMessage} from "../../modelsInterface/IChatMessage";
+import {IUser} from "../../modelsInterface/IUser";
+import {Message} from "../index";
+import {IMessageProps} from "../message/message";
+import {IChat} from "../../modelsInterface/IChat";
+import {StoreEvents} from "../../data/store";
+import {getUserName} from "../../utils/user.utils";
 
 interface IMessageListProps extends IProps {
     messageList: IChatMessage[];
