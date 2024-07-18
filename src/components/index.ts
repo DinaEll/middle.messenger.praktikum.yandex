@@ -15,3 +15,6 @@ export {default as  MessageList } from './message-list';
 export {default as Message } from './message';
 export {default as Badge } from './badge';
 export { default as Error } from './error';
+export {default as ModalAvatar } from './modal-avatar';
+export {default as ModalChatUsers } from './modal-chat-users';
+export { default as UserItem } from './user-item';
