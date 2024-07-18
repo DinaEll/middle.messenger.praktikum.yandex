@@ -1,10 +1,10 @@
 import {BASE_URLS} from "../config";
 import Router from "../core/router";
 import alertController from "../core/alert-controller";
-import Alert from "../components/1/alert";
+import Alert from "../components/alert";
 import Block from "../core/block";
 import modalController from "../core/modal-controller";
-import {IResult} from "../core/Http";
+import {IResult} from "../core/http";
 
 
 export const responseHasError = (response: IResult) => {

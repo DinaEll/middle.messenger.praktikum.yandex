@@ -71,6 +71,17 @@ export const validatePhone = (value: string) => {
 }
 
 export const validateMessage = (value: string) => {
-  if (value.length === 0) return `Поле не должно быть пустым`;
-  return '';
+    if (value.length === 0) return `Сообщение не должно быть пустым`;
+    return '';
+}
+
+export const validateNameChat = (value: string) => {
+    if (value.length === 0) return `Имя чата не должно быть пустым`;
+    return '';
+}
+
+export const validateDisplayName = (value: string) => {
+    if (value.length > 50) return `Никнейм не должен быть больше 50 символов`;
+    if(value.length===0)return ' ';
+    return '';
 }
