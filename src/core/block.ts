@@ -1,11 +1,12 @@
-import EventBus from "./EventBus";
-
+import EventBus from "./event-bus";
 import {v4 as uuidv4} from 'uuid';
 import Handlebars from "handlebars";
-import {isDeepEqual} from "./object.utils";
+import {isDeepEqual} from "../utils/object.utils";
+
 export interface IProps {
   events?: object
 }
+
 export class Block {
   static EVENTS = {
     INIT: "init",
@@ -14,6 +15,7 @@ export class Block {
     FLOW_RENDER: "flow:render",
     FLOW_CWUM: "flow:component-will-unmount"
   };
+
   public id = uuidv4();
   protected _props: IProps;
   protected _element: HTMLElement | null = null;
@@ -33,6 +35,7 @@ export class Block {
     this.children = children;
     this._props = this._makePropsProxy(props, this);
     this._eventBus = () => eventBus;
+
     this._registerEvents(eventBus);
     eventBus.emit(Block.EVENTS.INIT);
   }
@@ -51,6 +54,7 @@ export class Block {
 
     return {props, children};
   }
+
   _registerEvents(eventBus: EventBus) {
     eventBus.on(Block.EVENTS.INIT, this._init.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
@@ -58,22 +62,28 @@ export class Block {
     eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CWUM, this._componentWillUnmount.bind(this));
   }
+
   private _init() {
     this.init();
 
     this._eventBus().emit(Block.EVENTS.FLOW_RENDER);
   }
+
   protected init() {
   }
+
   private _componentDidMount() {
     this.componentDidMount();
   }
+
   protected componentDidMount() {
   }
+
   public dispatchComponentDidMount() {
     this._eventBus().emit(Block.EVENTS.FLOW_CDM);
     Object.values(this.children).forEach(child => child.dispatchComponentDidMount());
   }
+
   private _componentDidUpdate(oldProps: IProps, newProps: IProps) {
     const response = this.componentDidUpdate(oldProps, newProps);
     if (response) {
@@ -81,7 +91,9 @@ export class Block {
       this._eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
   }
+
   protected componentDidUpdate(oldProps: IProps, newProps: IProps) {
+    // this.setProps(newProps);
     return isDeepEqual<IProps>(oldProps as { [index: string]: IProps }, newProps as { [index: string]: IProps });
   }
 
@@ -99,6 +111,7 @@ export class Block {
       return;
     }
     Object.assign(this._props, nextProps);
+
   };
 
   get element() {
@@ -114,18 +127,29 @@ export class Block {
   }
 
   private _render() {
-    const fragment = this.compile(this.render(), this._props);
-    const newElement = fragment.firstElementChild as HTMLElement;
-    if (this._element) {
-      this._element.replaceWith(newElement);
+    try{
+      const fragment = this.compile(this.render(), this._props);
+
+      const newElement = fragment.firstElementChild as HTMLElement;
+
+      if (this._element&&newElement) {
+        this._element.replaceWith(newElement);
+      }
+
+      this._element = newElement;
+
+      this._addEvents();
+
+    }
+    catch (err:unknown) {
+      //console.log('error',err)
     }
 
-    this._element = newElement;
-    this._addEvents();
   }
 
   _addEvents() {
     const {events = {}} = this._props as { events: Record<string, () => void> };
+
     Object.keys(events).forEach(eventName => {
       this._element?.addEventListener(eventName, events[eventName]);
     });
@@ -133,21 +157,22 @@ export class Block {
 
   _removeEvents() {
     const {events = {}} = this._props as { events: Record<string, () => void> };
+
     Object.keys(events).forEach(eventName => {
       this._element?.removeEventListener(eventName, events[eventName]);
     });
   }
 
   private compile(template: string, context: object) {
-    const contextAndStubs = {
-      ...context,
-      __children: [] as Array<{ component: unknown, embed(node: DocumentFragment): void }>,
-      __refs: this.refs
-    };
+
+    const contextAndStubs = {...context, __children: [] as Array<{ component: unknown, embed(node: DocumentFragment): void }>, __refs: this.refs};
 
     const html = Handlebars.compile(template)(contextAndStubs);
+
     const temp = document.createElement('template');
+
     temp.innerHTML = html;
+
     contextAndStubs.__children?.forEach(({embed}) => {
       embed(temp.content);
     });
@@ -181,6 +206,16 @@ export class Block {
         throw new Error("Нет доступа");
       }
     });
+  }
+
+  public hide(){
+  }
+  public show(){
+    const app = document.getElementById('app');
+    const htmlElement = this.getContent();
+    if (!app?.firstElementChild) app?.append(document.createElement('div'));
+    if(htmlElement)
+      app?.firstElementChild?.replaceWith(htmlElement);
   }
 
 
