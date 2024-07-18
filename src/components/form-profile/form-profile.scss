@@ -5,10 +5,10 @@
     align-items: center;
     padding: 60px;
 
-    .profile-avatar {
+    .profile__avatar {
         text-align: center;
 
-        .profile-avatar-name{
+        .profile__avatar__name{
             font-size: 16px;
             font-weight: bold;
             color:var(--blue);
@@ -16,11 +16,11 @@
         }
     }
 
-    .profile-main{
+    .profile__main{
         margin: 80px 0;
     }
 
-    .profile-buttons {
+    .profile__buttons {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -47,4 +47,3 @@
         opacity: 0.8;
     }
 }
-
