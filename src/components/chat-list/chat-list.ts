@@ -2,7 +2,7 @@ import {IProps, Block} from "../../core/block";
 import {IChat} from "../../modelsInterface/IChat";
 import {IUser} from "../../modelsInterface/IUser";
 import modalController from "../../core/modal-controller";
-import ModalPrompt from "../2/modal-prompt";
+import ModalPrompt from "../modal-prompt";
 import {createChat} from "../../services/chat";
 import {updateChats, setStateCurrentChat} from "../../services/app";
 import {StoreEvents} from "../../core/store";

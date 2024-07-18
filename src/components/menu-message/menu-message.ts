@@ -1,7 +1,7 @@
 import {IProps, Block} from "../../core/block";
 import {IChat} from "../../modelsInterface/IChat";
 import modalController from "../../core/modal-controller";
-import ModalLoadFile from "../2/modal-load-file";
+import ModalLoadFile from "../modal-load-file";
 import ModalController from "../../core/modal-controller";
 
 
