@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../utils/Block";
+import {IProps,Block} from "../../core/block";
 
 interface IInputProps extends IProps{
     type: 'text' | 'password',
@@ -58,7 +58,7 @@ export class InputShort extends Block {
 
         return (`
             <div class="input">
-                <label class="input-container">
+                <label class="input__container">
                 {{{ Input
                     ref="${ref}"
                     type="${type}"
@@ -69,9 +69,9 @@ export class InputShort extends Block {
                     onBlur=onBlur
                 }}}
 
-                    <div class="input-label">${label}</div>
-                    ${error ? ` <div class="input-error">
-                            <div class="input-text-error">${errorText}</div>
+                    <div class="input__label">${label}</div>
+                    ${error ? ` <div class="input__error">
+                            <div class="input__text-error">${errorText}</div>
                         </div>` : ""
         }
                 </label>

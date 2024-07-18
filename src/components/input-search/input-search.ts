@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../utils/Block";
+import {IProps,Block} from "../../core/block";
 
 interface IInputSearch extends IProps{
     name: string,
@@ -20,13 +20,12 @@ export class InputSearch extends Block {
 
         return this.refs?.input?.value()
     }
-
     protected render(): string {
         const { name = '', value = ''} = this._props as IInputSearch;
 
         return (`
            <label class="input-search">
-                <span class="input-search-label">Search...</span>
+                <span class="input-search__label">Search...</span>
                 {{{ Input
                     ref='input'
                     type="text"

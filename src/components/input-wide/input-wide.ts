@@ -1,4 +1,4 @@
-import{IProps,Block} from "../../utils/Block";
+import{IProps,Block} from "../../core/block";
 
 interface IInputWideProps extends IProps{
     type: 'text' | 'button',
@@ -35,11 +35,8 @@ export class InputWide extends Block {
     }
 
     private validate() {
-        console.log(this)
         const value = this.refs?.input?.value();
         const error = this.props.validate(value);
-
-        console.log('value,error', value, error)
         this.props.value = value;
 
         if (error) {
@@ -68,14 +65,14 @@ export class InputWide extends Block {
 
         return (`
             <div class="input-wide">
-                <label class="input-wide-container
-                 ${noLine ? `input-wide-container-noline` : ""}">
-                    <div class="input-wide-label"><span>${label}</span></div>
-                    ${readOnly ? `<span class="input-wide-text">${value}</span>` : ""}
+                <label class="input-wide__container
+                 ${noLine ? `input-wide__container-noline` : ""}">
+                    <div class="input-wide__label"><span>${label}</span></div>
+                    ${readOnly ? `<span class="input-wide__text">${value}</span>` : ""}
                      {{{ Input
                             ref='input'
                             type="${type}"
-                            classes="input-wide-value ${error ? "input__value-error" : ""}
+                            classes="input-wide__value ${error ? "input__value-error" : ""}
                                     ${readOnly ? "input__value-disabled" : ""}"
                             value='${value}'
                             placeholder=" "
@@ -83,8 +80,8 @@ export class InputWide extends Block {
                             onBlur=onBlur
                      }}}
                 </label>
-                 ${error ? ` <div class="input-wide-error">
-                            <div class="input-wide-text-error">${errorText}</div>
+                 ${error ? ` <div class="input-wide__error">
+                            <div class="input-wide__text-error">${errorText}</div>
                         </div>` : ""}
             </div>
         `)
