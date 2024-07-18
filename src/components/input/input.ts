@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../utils/Block";
+import {IProps,Block} from "../../core/block";
 
 
 interface IInputProps extends IProps {
@@ -13,14 +13,15 @@ interface IInputProps extends IProps {
 
 export class Input extends Block {
     constructor(props: IInputProps) {
-        props.events={
-            blur: props.onBlur || (() => {})
+        props.events = {
+            blur: props.onBlur || (() => {
+            }),
         };
         super(props)
     }
 
     protected render(): string {
-        const { classes, placeholder,ref,value,name,type } = this._props as IInputProps;
+        const {classes, placeholder, ref, value, name, type} = this._props as IInputProps;
         return (`
             <input
                 class="${classes}"
