@@ -55,10 +55,6 @@ class Router {
         route.render();
     }
 
-    /**
-     * go — переходит на нужный роут и отображает нужный блок;
-     * @param pathname
-     */
     go(pathname:string) {
         this.history?.pushState({}, "", pathname);
         this._onRoute(pathname);
@@ -68,7 +64,7 @@ class Router {
         this.history?.back();
 
     }
-    
+
     forward() {
         this.history?.forward();
 
