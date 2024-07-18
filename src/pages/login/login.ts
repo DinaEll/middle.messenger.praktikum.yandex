@@ -1,34 +1,73 @@
-import {IProps,Block} from "../../utils/Block";
+import {IProps, Block} from "../../core/block";
+import {BASE_URLS} from "../../config";
+import { signIn} from "../../services/auth";
+import {IUser} from "../../modelsInterface/IUser";
+import {StoreEvents} from "../../core/store";
+
+
 
 export interface ILoginPageProps extends IProps {
-    onLogin:(event:Event)=>void
+    onLogin: (event: Event) => void;
+    currentUser?: IUser|null;
 }
-export class Login extends Block {
-    constructor() {
-        const props:ILoginPageProps={
-            events:{},
-            onLogin: (event:Event) => {
-                event.preventDefault();
-                const login =  this.refs.formLogin.getRefs()?.login.value();
-                const password =  this.refs.formLogin.getRefs()?.password.value();
 
-                console.log({
-                    login,
-                    password
-                })
-            }
+export class LoginPage extends Block {
+  constructor() {
+    const onLogin=(event: Event) => {
+      event.preventDefault();
+      const login = this.refs.formLogin.getRefs()?.login.value();
+      const password = this.refs.formLogin.getRefs()?.password.value();
+
+      if (!login) {
+        return;
+      }
+      if (!password) {
+        return;
+      }
+      signIn({login, password}).catch((error)=>console.warn('login',error));
+
+    };
+    const props: ILoginPageProps = {
+      events:{
+        submit:(event: Event)=>{
+          onLogin(event);
         }
-
-        super(props);
+      },
+      onLogin: onLogin,
+      currentUser:undefined,
     }
+    window.store.on(StoreEvents.Updated, () => {
+      this.props.currentUser = window.store.getState().user;
+      this.setProps(this.props);
+    });
+    super(props);
+  }
+  public get props() {
+    return this._props as ILoginPageProps;
+  }
 
-    protected render(): string {
-        const children:string=`
-        {{{ InputShort label='Логин' type='text' name='login' validate=validate.login ref='login' }}}
-        {{{ InputShort label='Пароль' type='password' name='password' validate=validate.password ref='password' }}}`
-        return(`
+  protected render(): string {
+    const {currentUser}=this.props;
+    if(currentUser===undefined)
+      return ` <div class="container container-center">
+                 {{{Loader }}}
+            </div>`;
+
+
+    const children: string = `
+        {{{ InputShort label='Login' type='text' name='login' validate=validate.login ref='login' }}}
+        {{{ InputShort label='Password' type='password' name='password' validate=validate.password ref='password' }}}`;
+    return (`
             <form class="container container-center">
-                {{{ FormAuth caption="Авторизация" captionOk="Авторизоваться" captionCancel="Вернуться на стартовую страничку" pageOk="chat" pageCancel="startPage" onClickOkButton=onLogin children="${children}" ref="formLogin" }}}
+                {{{ FormAuth
+                        caption="Login"
+                        captionOk="Login"
+                        captionCancel="Sign up"
+                        onClickOkButton=onLogin
+                        children="${children}"
+                        ref="formLogin"
+                        cancelLink="${BASE_URLS['page-sign-up']}"
+                }}}
             </form>`)
-    }
+  }
 }
