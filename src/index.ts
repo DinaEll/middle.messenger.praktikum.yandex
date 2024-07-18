@@ -35,8 +35,7 @@ const router = new Router(".app");
 initialStateApp();
 
 
-router/*.use(BASE_URLS['page-default'], Pages.PageChat)*/
-    .use(BASE_URLS['page-all-components'], Pages.AllComponentsPage)
+router
     .use(BASE_URLS['page-login'], Pages.LoginPage)
     .use(BASE_URLS['page-sign-up'], Pages.PageRegistration)
     .use(BASE_URLS['page-profile'], Pages.PageProfile)

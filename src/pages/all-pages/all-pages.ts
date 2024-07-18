@@ -1,6 +1,6 @@
-import {Block} from "../../utils/Block";
+import {Block} from "../../core/block";
 
-export class StartPage extends Block {
+export class AllPages extends Block {
 
   constructor() {
     super({events: {}});
