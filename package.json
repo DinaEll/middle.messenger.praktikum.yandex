@@ -13,13 +13,13 @@
     "lint:css:fix": "stylelint '**/*.css' --fix"
   },
   "engines": {
-    "node": ">= 12.0.0"
+    "node": ">= 14.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.8",
     "@types/uuid": "^10.0.0",
-    "@typescript-eslint/eslint-plugin": "6.18.0",
-    "@typescript-eslint/parser": "6.18.0",
+    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/parser": "6.6.0",
     "@vitejs/plugin-vue": "^5.0.5",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -41,7 +41,7 @@
     "stylelint-config-recommended": "^14.0.1",
     "stylelint-config-standard": "^36.0.1",
     "stylelint-scss": "^6.3.2",
-    "typescript": "^5.5.2",
+    "typescript": "^5.2.2",
     "vite": "^5.3.1",
     "vite-plugin-checker": "^0.6.4",
     "vite-plugin-eslint": "^1.8.1",
