@@ -1,6 +1,6 @@
-import {Block} from "../../utils/Block";
+import {Block} from "../../core/block";
 
-export class ErrorNotFound extends Block {
+export class Page404 extends Block {
     constructor() {
         super({events:{}});
     }
