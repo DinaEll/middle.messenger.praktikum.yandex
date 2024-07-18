@@ -1,6 +1,6 @@
-import {Block} from "../../utils/Block";
+import {Block} from "../../core/block";
 
-export class ErrorInternalServer extends Block {
+export class Page500 extends Block {
     constructor() {
         super({events:{}});
     }
