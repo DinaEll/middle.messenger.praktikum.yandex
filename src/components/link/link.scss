@@ -1,18 +1,43 @@
-@import '../../assets/variables';
-
 .link {
-  font: $font-small;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 40px;
-  width: 100%;
-  text-align: center;
-  color: $link-color;
-  text-decoration: none;
-  cursor: pointer;
+    color: var(--gray-light);
+    font-weight: bolder;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+    display: flex;
 
-  &:hover {
-    text-decoration: underline;
-  }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &.link-line{
+        border-bottom: 1px solid var(--gray-light);
+        width: 510px;
+    }
+
+    .link-icon{
+        background: url("../../assets/icons/arrow-right.svg") no-repeat;
+        width: 12px;
+        height: 12px;
+        margin-left: 5px;
+        margin-top: 5px;
+        font-size: 16px;
+    }
+
+    &.link-primary{
+        color: var(--gray-light);
+    }
+
+    &.link-success{
+        color: var(--success);
+    }
+
+    &.link-danger{
+        color: var(--blue);
+    }
 }
+
+
+
+
