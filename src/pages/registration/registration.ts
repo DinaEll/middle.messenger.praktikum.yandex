@@ -71,7 +71,7 @@ export class PageRegistration extends Block {
                 {{{ FormAuth
                     caption="Registration"
                     captionOk="sign up"
-                    captionCancel="Cancel"
+                    captionCancel="Назад"
                     pageOk="allPages"
                     pageCancel="loginPage"
                     onClickOkButton=onLogin

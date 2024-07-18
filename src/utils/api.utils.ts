@@ -17,13 +17,11 @@ export const responseHasError = (response: IResult) => {
         default: {
             const error = (response.data as unknown as {reason:string}).reason;
             if (error.includes('Cookie')) {
-               // showAlert('Please, login!');
                 return error;
             } else {
                 if(modalController.opened)showModalAlert(error);
                 else showAlert(error);
             }
-            //if (error) throw Error(error);
             return error;
         }
 

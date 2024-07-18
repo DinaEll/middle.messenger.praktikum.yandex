@@ -3,11 +3,7 @@ import {isObject} from "./object.utils";
 
 export type StringIndexed = Record<string, unknown>;
 
-/**
- * Напишите функцию, которая умеет удалять из начала и конца строки пробельные или отдельно заданные пользовательские символы. Удаление пробелов из начала и конца строк — поведение по умолчанию. Пробел необязательно должен быть передан в качестве аргумента.
- * @param str -строка для анализа
- * @param deleted -удаляемые символы
- */
+
 export const trim = (str: string, deleted?: string): string => {
     if (str && !deleted) return str.trim();
     const chars = deleted?.split("").map(item => "\\" + item).join('');
@@ -31,10 +27,6 @@ export const trim = (str: string, deleted?: string): string => {
     return str.substring(startWord, endWord);
 }
 
-/**
- *  Get string of query params from object params
- * @param data
- */
 export function queryStringify(data: StringIndexed) {
     if (!isObject(data)) {
         throw Error('Input must be an object')

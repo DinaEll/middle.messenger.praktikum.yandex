@@ -68,7 +68,6 @@ export const sendMessage = (message: string) => {
 
 export const getAllNewMessage = (limit: number, chat: IChat | null) => {
     {
-        //const chat = window.store.getState().currentChat;
         if (!chat) throw Error('Select Chat!');
         if (chat.connection) {
             chat.connection.sendRequestForgetMessage(limit);

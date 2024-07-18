@@ -60,9 +60,9 @@ export class LoginPage extends Block {
     return (`
             <form class="container container-center">
                 {{{ FormAuth
-                        caption="Login"
-                        captionOk="Login"
-                        captionCancel="Sign up"
+                        caption="Вход в КотЧат"
+                        captionOk="Войти"
+                        captionCancel="Зарегистрироваться"
                         onClickOkButton=onLogin
                         children="${children}"
                         ref="formLogin"

@@ -52,7 +52,7 @@ export class ChatItem extends Block {
                     </div>
                     ${unread_count ? `{{{ Button type="number" caption='${unread_count}' }}}` : ''}
                 </div>` : ` <div class="chat-item__message__content">
-                        <p> no messages</p>
+                        <p>Пока нет сообщений</p>
                     </div>`}
 
             </li>

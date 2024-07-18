@@ -51,7 +51,7 @@ export class ModalPrompt extends Block {
                  {{{  Modal
                          caption='${this.props.caption}'
                          okText='${this.props.okText}'
-                         cancelText='Cancel'
+                         cancelText='Назад'
                          okClick=okInputClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"
