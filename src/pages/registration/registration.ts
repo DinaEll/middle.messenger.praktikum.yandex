@@ -1,32 +1,51 @@
-import {IProps,Block} from "../../utils/Block";
+import {IProps, Block} from "../../core/block";
+import {signUp} from "../../services/auth";
+import {IUser} from "../../modelsInterface/IUser";
+import {BASE_URLS} from "../../config";
+import {showAlert} from "../../utils/api.utils";
+import Router from "../../core/router";
 
-export interface IRegistrationPage extends IProps {
-    onLogin:(event:Event)=>void,
+export interface IPageRegistrationProps extends IProps {
+    onLogin: (event: Event) => void,
 }
-export class RegistrationPage extends Block {
+export class PageRegistration extends Block {
     constructor() {
-        const props:IRegistrationPage={
-            events:{},
-            onLogin:  (event: Event) => {
-                event.preventDefault();
-                const login = this.refs.form.getRefs()?.login.value();
-                const email = this.refs.form.getRefs()?.email.value();
-                const phone = this.refs.form.getRefs()?.phone.value();
-                const first_name = this.refs.form.getRefs()?.first_name.value();
-                const second_name = this.refs.form.getRefs()?.second_name.value();
-                const password = this.refs.form.getRefs()?.password.value();
-                const password2 = this.refs.form.getRefs()?.password2.value();
-
-                console.log({
-                    login,
-                    password,
-                    password2,
-                    second_name,
-                    first_name,
-                    phone,
-                    email
-                })
+        const onLogin = (event: Event) => {
+            event.preventDefault();
+            const login = this.refs.form.getRefs()?.login.value();
+            const email = this.refs.form.getRefs()?.email.value();
+            const phone = this.refs.form.getRefs()?.phone.value();
+            const first_name = this.refs.form.getRefs()?.first_name.value();
+            const second_name = this.refs.form.getRefs()?.second_name.value();
+            const password = this.refs.form.getRefs()?.password.value();
+            const password2 = this.refs.form.getRefs()?.password2.value();
+            if (password !== password2) {
+                showAlert('Repeat passwords correct!');
+                return;
             }
+            const data = {
+                first_name,
+                second_name,
+                login,
+                email,
+                password,
+                phone
+            } as IUser;
+            if (Object.values(data).findIndex(value => value === '') === -1) {
+                signUp(data)
+                    .then(() => Router.getRouter().go(BASE_URLS['page-chat']))
+                    .catch((error) => console.warn('login', error));
+
+            }
+
+        }
+        const props: IPageRegistrationProps = {
+            events: {
+                submit: async (event: Event) => {
+                    await onLogin(event);
+                }
+            },
+            onLogin: onLogin
         }
 
         super(props);
@@ -49,7 +68,17 @@ export class RegistrationPage extends Block {
 
         return (`
             <form class="container container-center">
-                {{{ FormAuth caption="Регистрация" captionOk="Сохранить" captionCancel="Вернуться на стартовую страничку" pageOk="chat" pageCancel="startPage" onClickOkButton=onLogin children="${this.getChildren()}" ref="form" }}}
+                {{{ FormAuth
+                    caption="Registration"
+                    captionOk="sign up"
+                    captionCancel="Cancel"
+                    pageOk="allPages"
+                    pageCancel="loginPage"
+                    onClickOkButton=onLogin
+                    children="${this.getChildren()}"
+                    ref="form"
+                    cancelLink="${BASE_URLS['page-login']}"
+                }}}
             </form>`)
     }
 }

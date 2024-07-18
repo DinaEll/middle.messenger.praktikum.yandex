@@ -1,3 +1,3 @@
-import "./chat-page.scss";
+import "./page-chat.scss";
 
-export { ChatPage as default } from './chat-page';
+export { PageChat as default } from './page-chat';
