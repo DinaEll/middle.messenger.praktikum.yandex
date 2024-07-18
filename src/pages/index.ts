@@ -1,10 +1,7 @@
-export {default as RegistrationPage} from './registration';
-export {default as ChangeData} from './changeData';
-export {default as PageProfile} from './user-page';
-export {default as ChangePassword} from './changePassword';
-export {default as ChatPage} from './chat-page';
-export {default as ErrorInternalServer} from './error-internal-server';
-export {default as ErrorNotFound} from './error-not-found';
-export {default as StartPage} from './start-page';
+export {default as PageRegistration} from './registration';
+export {default as PageProfile} from './profile';
+export {default as PageChat} from './chat-page';
+export {default as Page500} from './500';
+export {default as Page404} from './404';
+export {default as AllPages} from './all-pages';
 export {default as LoginPage} from './login';
-
