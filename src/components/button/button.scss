@@ -15,11 +15,12 @@
     &:hover {
         opacity: 0.8;
     }
+
 }
 
 .button-arrow {
     padding: 0;
-    background-image: url("../../assets/icons/send.svg");
+    background-image: url("src/assets/icons/send.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -29,7 +30,7 @@
 
 .button-dots {
     padding: 0;
-    background-image: url("../../assets/icons/dots.svg");
+    background-image: url("src/assets/icons/dots.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -40,7 +41,7 @@
 
 .button-paperclip {
     padding: 0;
-    background-image: url("src/assets/icons/paper.svg");
+    background-image: url("src/assets/icons/paperclip.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -51,10 +52,21 @@
 
 .button-cancel {
     padding: 0;
-    background-image: url("../../assets/icons/arrow-left.svg");
+    background-image: url("src/assets/icons/arrow-left.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
+    width: 36px;
+    height: 36px;
+}
+
+.button-close {
+    padding: 0;
+    background-image: url("src/assets/icons/close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-color:transparent;
     width: 36px;
     height: 36px;
 }
@@ -69,5 +81,19 @@
     height: 25px;
 }
 
+.button-link {
+    padding: 5px;
+    background-color: transparent;
+    color: var(--blue);
+    text-transform: none;
+    width: auto;
 
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
+button:focus-visible {
+    outline: none;
+    opacity: 0.8;
+}
