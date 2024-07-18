@@ -1,7 +1,7 @@
-import {IProps, Block} from "../../data/block.ts";
-import modalController from "../../data/modal-controller.ts";
-import { ModalAvatar} from "../index.ts";
-import {BASE_RESOURCES_URL} from "../../config.ts";
+import {IProps, Block} from "../../data/block";
+import modalController from "../../data/modal-controller";
+import { ModalAvatar} from "../index";
+import {BASE_RESOURCES_URL} from "../../config";
 
 interface IAvatarProps extends IProps {
     size: 'sm' | 'md',

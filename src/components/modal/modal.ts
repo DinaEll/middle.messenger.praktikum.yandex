@@ -1,5 +1,5 @@
-import {IProps, Block} from "../../data/block.ts";
-import {ALL_VALIDATE_FIELDS, IValidateType} from "../../modelsInterface/IValidateType.ts";
+import {IProps, Block} from "../../data/block";
+import {ALL_VALIDATE_FIELDS, IValidateType} from "../../modelsInterface/IValidateType";
 
 interface IModalProps extends IProps {
     caption: string,

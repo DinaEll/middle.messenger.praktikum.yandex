@@ -1,4 +1,4 @@
-import {getUser} from "./auth.ts";
+import {getUser} from "./auth";
 import Router from "../data/router";
 import {BASE_URLS} from "../config";
 import {IUser} from "../modelsInterface/IUser";
