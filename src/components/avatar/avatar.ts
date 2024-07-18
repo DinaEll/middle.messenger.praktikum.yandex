@@ -1,5 +1,5 @@
-import {IProps, Block} from "../../core/block.ts";
-import modalController from "../../core/modal-controller.ts";
+import {IProps, Block} from "../../data/block.ts";
+import modalController from "../../data/modal-controller.ts";
 import { ModalAvatar} from "../index.ts";
 import {BASE_RESOURCES_URL} from "../../config.ts";
 

@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../core/block";
+import {IProps,Block} from "../../data/block";
 import {IUser} from "../../modelsInterface/IUser";
 import {ALL_VALIDATE_FIELDS, IValidateType} from "../../modelsInterface/IValidateType";
 import {logOut} from "../../services/auth";

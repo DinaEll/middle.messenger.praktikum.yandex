@@ -1,7 +1,7 @@
-import {Block, IProps} from "../../core/block";
+import {Block, IProps} from "../../data/block";
 import {updateUserAvatar, updateUserProfile} from "../../services/user-settings";
 import {BASE_RESOURCES_URL} from "../../config";
-import modalController from "../../core/modal-controller";
+import modalController from "../../data/modal-controller";
 import {addActive, deleteActive, loadNewFileFromDrag} from "../../utils/load-file.utils";
 import {updateChatAvatar} from "../../services/chat";
 

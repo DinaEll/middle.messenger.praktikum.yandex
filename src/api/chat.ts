@@ -1,4 +1,4 @@
-import HTTPTransport from "../core/http";
+import HTTPTransport from "../data/http";
 import {IChatUsersData} from "../modelsInterface/IChat";
 
 export class ChatApi {

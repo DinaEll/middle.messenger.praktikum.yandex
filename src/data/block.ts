@@ -127,12 +127,12 @@ export class Block {
   }
 
   private _render() {
-    try{
+    try {
       const fragment = this.compile(this.render(), this._props);
 
       const newElement = fragment.firstElementChild as HTMLElement;
 
-      if (this._element&&newElement) {
+      if (this._element && newElement) {
         this._element.replaceWith(newElement);
       }
 
@@ -140,8 +140,7 @@ export class Block {
 
       this._addEvents();
 
-    }
-    catch (err:unknown) {
+    } catch (err: unknown) {
       //console.log('error',err)
     }
 
@@ -165,7 +164,11 @@ export class Block {
 
   private compile(template: string, context: object) {
 
-    const contextAndStubs = {...context, __children: [] as Array<{ component: unknown, embed(node: DocumentFragment): void }>, __refs: this.refs};
+    const contextAndStubs = {
+      ...context,
+      __children: [] as Array<{ component: unknown, embed(node: DocumentFragment): void }>,
+      __refs: this.refs
+    };
 
     const html = Handlebars.compile(template)(contextAndStubs);
 
@@ -208,13 +211,14 @@ export class Block {
     });
   }
 
-  public hide(){
+  public hide() {
   }
-  public show(){
+
+  public show() {
     const app = document.getElementById('app');
     const htmlElement = this.getContent();
     if (!app?.firstElementChild) app?.append(document.createElement('div'));
-    if(htmlElement)
+    if (htmlElement)
       app?.firstElementChild?.replaceWith(htmlElement);
   }
 

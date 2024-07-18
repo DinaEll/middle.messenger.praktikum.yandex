@@ -1,4 +1,4 @@
-import{IProps,Block} from "../../core/block";
+import{IProps,Block} from "../../data/block";
 
 interface IInputWideProps extends IProps{
     type: 'text' | 'button',

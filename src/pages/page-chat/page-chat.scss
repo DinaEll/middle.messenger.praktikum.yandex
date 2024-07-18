@@ -3,10 +3,9 @@
   height: 100vh;
   display: grid;
   grid-template: "chat-page__left chat-page__main" 1fr / auto 1fr;
-  gap: 0 0;
+  gap: 0;
   grid-auto-flow: row;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  overflow: auto hidden;
 }
 
 .chat-page-left {

@@ -1,11 +1,11 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IChat} from "../../modelsInterface/IChat";
 import {IUser} from "../../modelsInterface/IUser";
-import modalController from "../../core/modal-controller";
+import modalController from "../../data/modal-controller";
 import ModalPrompt from "../modal-prompt";
 import {createChat} from "../../services/chat";
 import {updateChats, setStateCurrentChat} from "../../services/app";
-import {StoreEvents} from "../../core/store";
+import {StoreEvents} from "../../data/store";
 
 
 interface IChatListProps extends IProps {

@@ -1,6 +1,6 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IChat} from "../../modelsInterface/IChat";
-import modalController from "../../core/modal-controller";
+import modalController from "../../data/modal-controller";
 import {ModalAvatar, ModalChatUsers} from "../index";
 
 

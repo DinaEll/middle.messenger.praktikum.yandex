@@ -1,9 +1,9 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IUser} from "../../modelsInterface/IUser";
-import {StoreEvents} from "../../core/store";
+import {StoreEvents} from "../../data/store";
 import {showAlert} from "../../utils/api.utils";
 import {updateUserPassword, updateUserProfile} from "../../services/user-settings";
-import Router from "../../core/router";
+import Router from "../../data/router";
 
 export interface IPageProfileProps extends IProps {
   user?: IUser | null;

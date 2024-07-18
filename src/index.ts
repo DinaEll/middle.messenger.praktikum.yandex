@@ -1,12 +1,12 @@
 import './styles/index.scss';
 import * as Components from './components';
 import * as Pages from './pages';
-import {registerComponent} from "./core/register-components";
-import Router from "./core/router";
+import {registerComponent} from "./data/register-components";
+import Router from "./data/router";
 import {BASE_URLS} from "./config";
 import {initialStateApp} from "./services/app";
 import {IAppState} from "./modelsInterface/IAppState";
-import {Store} from "./core/store";
+import {Store} from "./data/store";
 
 Object.entries(Components).forEach(
     ([componentName, component]) => registerComponent(componentName, component)

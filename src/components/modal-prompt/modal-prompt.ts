@@ -1,5 +1,5 @@
-import {IProps, Block} from "../../core/block";
-import modalController from "../../core/modal-controller";
+import {IProps, Block} from "../../data/block";
+import modalController from "../../data/modal-controller";
 
 interface IModalPromptProps extends IProps {
     caption: string,
