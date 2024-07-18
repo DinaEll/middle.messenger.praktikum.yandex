@@ -140,6 +140,7 @@ export class Block {
       this._addEvents();
 
     } catch (err: unknown) {
+      console.error('Новая ошибка:', err);
     }
 
   }
