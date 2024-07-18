@@ -22,9 +22,9 @@ export class ChatList extends Block {
     props.list = window.store.getState().chats || [];
     props.showModalAddChat = () => {
       modalController.addModal((new ModalPrompt({
-        caption: 'Add Chat',
-        labelText: 'Title Chat',
-        okText: 'Add Chat',
+        caption: 'Добавить чат',
+        labelText: 'Название чата',
+        okText: 'Добавить чат',
         ref: "modal",
         okClick: (result: string) => {
           createChat(result)
@@ -58,7 +58,7 @@ export class ChatList extends Block {
   }
 
   getChats(list: IChat[]): string {
-    if (!list || list.length === 0) return `<li class="chat-list__chats-empty">{{{Button caption="Add chat" type='link' onClick=showModalAddChat }}}</li>`;
+    if (!list || list.length === 0) return `<li class="chat-list__chats-empty">{{{Button caption="Добавить чат" type='link' onClick=showModalAddChat }}}</li>`;
     return list.map(chat => {
       return (`  {{{ChatItem
                     onClick=setCurrentChat
@@ -66,7 +66,7 @@ export class ChatList extends Block {
                     title='${chat.title} '
                     avatar='${chat.avatar} '
                     unread_count='${chat.unread_count > 0 ? String(chat.unread_count) : ''}'
-                    last_message_content='${chat.last_message ? chat.last_message.content : 'no messages'} '
+                    last_message_content='${chat.last_message ? chat.last_message.content : 'Пока нет сообщений'} '
                     last_message_time='${chat.last_message ? chat.last_message.time : ''}' }}} `)
     }).join('')
   }
@@ -78,17 +78,13 @@ export class ChatList extends Block {
                  {{{Loader }}}
             </div>`
 
-    //if (!list || list.length === 0) return 'Add chat';
     return (`
             <div class="chat-list">
                 <nav class="chat-list__header">
                 ${currentUser && `{{{ Avatar imageUrl='${currentUser.avatar || ''}' size='sm' }}}`}
-                {{{Button caption="New Chat" type='link' onClick=showModalAddChat }}}
-                 {{{Link caption="Profile" href="/settings"  linkIcon=true }}}
+                {{{Button caption="Новый чат" type='link' onClick=showModalAddChat }}}
+                 {{{Link caption="Профиль" href="/settings"  linkIcon=true }}}
                 </nav>
-<!--                <div class="chat-list__search">
-                    {{{ InputSearch }}}
-                </div>-->
                 <ul class="chat-list__chats">
                     ${this.getChats(list)}
                 </ul>

@@ -93,7 +93,6 @@ export class Block {
   }
 
   protected componentDidUpdate(oldProps: IProps, newProps: IProps) {
-    // this.setProps(newProps);
     return isDeepEqual<IProps>(oldProps as { [index: string]: IProps }, newProps as { [index: string]: IProps });
   }
 
@@ -141,7 +140,6 @@ export class Block {
       this._addEvents();
 
     } catch (err: unknown) {
-      //console.log('error',err)
     }
 
   }

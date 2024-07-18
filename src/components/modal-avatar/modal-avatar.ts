@@ -47,9 +47,6 @@ export class ModalAvatar extends Block {
           if (chat && this.props.oldAvatar) {
             this.props.newAvatar = '';
             console.log('Вернуть на место старый аватар')
-            /* updateChatAvatar({...user, avatar: this.props.oldAvatar}).then(() => {
-                 modalController.closeModal();
-             });*/
             modalController.closeModal();
           }
           modalController.closeModal();
@@ -140,9 +137,9 @@ export class ModalAvatar extends Block {
   protected render(): string {
     return (`
                  {{{  Modal
-                         caption="Change Avatar"
-                         okText='Save'
-                         cancelText='Cancel'
+                         caption="Выбрать Аватар"
+                         okText='Сохранить'
+                         cancelText='Назад'
                          okClick=okClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"

@@ -144,9 +144,9 @@ export class PageProfile extends Block {
                     onChangeStateForm=onChangeStateForm
                     onCancel=onCancel
                     ${isEditProfile ?
-      `onClickOkButton=onChangeProfile buttonText='Save User Profile' ` :
+      `onClickOkButton=onChangeProfile buttonText='Сохранить профиль' ` :
       isEditPassword ?
-        `onClickOkButton=onChangePassword buttonText='Save Password'` : ''
+        `onClickOkButton=onChangePassword buttonText='Сохранить пароль'` : ''
     }
 
 

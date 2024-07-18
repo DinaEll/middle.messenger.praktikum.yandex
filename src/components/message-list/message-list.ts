@@ -60,7 +60,7 @@ export class MessageList extends Block {
         const {messageList, currentChat, currentUser} = this.props;
         if (!currentChat)
             return (`<div class="message-list__empty">
-                        ${currentUser?`<p class="">Select a chat to write a message</p>`:``}
+                        ${currentUser?`<p class="">Выберите чат, чтобы написать сообщение</p>`:``}
                     </div>`)
         const users = currentChat.users?.length || 0;
         return (`
@@ -74,7 +74,7 @@ export class MessageList extends Block {
                      {{{MessageListFooter }}}
                 ` :
             `<div class="message-list__empty">
-                     <p class="">Add users to chat</p>
+                     <p class="">Добавьте друга или котика в чат</p>
                 </div>`
         }
 

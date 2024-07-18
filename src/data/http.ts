@@ -67,7 +67,6 @@ class HTTPTransport {
       const xhr = new XMLHttpRequest();
       xhr.withCredentials = true;
       xhr.timeout = timeout;
-      //const isGet = method === METHODS.GET;
       xhr.open(method || METHODS.GET, url);
 
 
@@ -77,17 +76,12 @@ class HTTPTransport {
 
 
       xhr.onload = function () {
-        //resolve(xhr);
         if (xhr.getResponseHeader('content-type')?.includes('application/json')) {
           const resultData = {status: xhr.status, data: JSON.parse(xhr.responseText)};
           resolve(resultData);
         } else resolve(xhr);
 
       };
-
-      /*        const handleError = err => {
-                  reject(err);
-              };*/
 
       xhr.onabort = reject;
       xhr.onerror = reject;

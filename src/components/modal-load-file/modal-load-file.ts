@@ -92,9 +92,9 @@ export class ModalLoadFile extends Block {
     protected render(): string {
         return (`
                  {{{  Modal
-                         caption="Add File"
-                         okText='Send'
-                         cancelText='Cancel'
+                         caption="Добавить файл"
+                         okText='Отправить'
+                         cancelText='Назад'
                          okClick=okClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"
