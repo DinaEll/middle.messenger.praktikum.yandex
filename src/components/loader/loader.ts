@@ -1,4 +1,4 @@
-import {Block} from "../../utils/Block";
+import {Block} from "../../core/block";
 
 export class Loader extends Block {
     protected render(): string {
