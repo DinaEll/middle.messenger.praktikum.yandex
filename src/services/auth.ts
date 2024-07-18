@@ -1,7 +1,7 @@
 import {IAuthData, IUser} from "../modelsInterface/IUser";
 import AuthApi from "../api/auth";
 import {responseHasError} from "../utils/api.utils";
-import Router from "../core/router";
+import Router from "../data/router";
 import {BASE_URLS} from "../config";
 import {initialStateApp, setStateUser} from "./app";
 

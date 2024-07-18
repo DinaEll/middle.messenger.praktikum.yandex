@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../core/block.ts";
+import {IProps,Block} from "../../data/block.ts";
 import {IChatMessage} from "../../modelsInterface/IChatMessage";
 import {getShortDate} from "../../utils/date.utils.ts";
 import {BASE_RESOURCES_URL} from "../../config.ts";

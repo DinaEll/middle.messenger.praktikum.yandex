@@ -1,4 +1,4 @@
-import {Block} from "../../core/block";
+import {Block} from "../../data/block";
 
 export class Page500 extends Block {
     constructor() {

@@ -1,9 +1,9 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {signUp} from "../../services/auth";
 import {IUser} from "../../modelsInterface/IUser";
 import {BASE_URLS} from "../../config";
 import {showAlert} from "../../utils/api.utils";
-import Router from "../../core/router";
+import Router from "../../data/router";
 
 export interface IPageRegistrationProps extends IProps {
     onLogin: (event: Event) => void,

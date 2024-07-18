@@ -1,4 +1,4 @@
-import {Block} from "../../core/block";
+import {Block} from "../../data/block";
 
 export class AllPages extends Block {
 

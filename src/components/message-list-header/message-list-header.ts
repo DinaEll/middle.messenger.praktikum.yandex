@@ -1,6 +1,6 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IChat} from "../../modelsInterface/IChat";
-import {StoreEvents} from "../../core/store";
+import {StoreEvents} from "../../data/store";
 
 interface IMessageListProps extends IProps {
     currentChat: IChat|null;

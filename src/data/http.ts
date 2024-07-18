@@ -15,42 +15,52 @@ type IOptionsRequest = {
   headers?: Record<string, string>;
   params?: object;
 }
-export type IResult={
-  status:number;
-  data:object
+export type IResult = {
+  status: number;
+  data: object
 }
 
 type HTTPMethod = (url: string, options?: IOptionsRequest) => Promise<IResult>
 
 
-
 class HTTPTransport {
-  private readonly baseUrl:string=''
-  constructor(base_url?:string) {
-    this.baseUrl=base_url||BASE_API_URL;
+  private readonly baseUrl: string = ''
+
+  constructor(base_url?: string) {
+    this.baseUrl = base_url || BASE_API_URL;
   }
-  get: HTTPMethod = (url, options = {}):Promise<IResult> => {
-    return this.request(this.baseUrl+url+queryStringify(options.params as NonNullable<unknown> || {}) || '', {
+
+  get: HTTPMethod = (url, options = {}): Promise<IResult> => {
+    return this.request(this.baseUrl + url + queryStringify(options.params as NonNullable<unknown> || {}) || '', {
       ...options,
       method: METHODS.GET
-    }, options.timeout)as Promise<IResult> ;
+    }, options.timeout) as Promise<IResult>;
   };
 
   put: HTTPMethod = (url, options = {}) => {
 
-    return this.request(this.baseUrl+url, {...options, method: METHODS.PUT}, options.timeout) as Promise<IResult>;
+    return this.request(this.baseUrl + url, {
+      ...options,
+      method: METHODS.PUT
+    }, options.timeout) as Promise<IResult>;
   };
-  post: HTTPMethod = (url, options = {})=> {
+  post: HTTPMethod = (url, options = {}) => {
 
-    return this.request(this.baseUrl+url, {...options, method: METHODS.POST},options.timeout) as Promise<IResult>;
+    return this.request(this.baseUrl + url, {
+      ...options,
+      method: METHODS.POST
+    }, options.timeout) as Promise<IResult>;
   };
   delete: HTTPMethod = (url, options = {}) => {
 
-    return this.request(this.baseUrl+url, {...options, method: METHODS.DELETE}, options.timeout) as Promise<IResult>;
+    return this.request(this.baseUrl + url, {
+      ...options,
+      method: METHODS.DELETE
+    }, options.timeout) as Promise<IResult>;
   };
 
   request = (url: string, options: IOptionsRequest = {method: METHODS.GET,}, timeout = 5000) => {
-    const {method, data,headers} = options;
+    const {method, data, headers} = options;
 
     return new Promise((resolve, reject) => {
 
@@ -68,12 +78,10 @@ class HTTPTransport {
 
       xhr.onload = function () {
         //resolve(xhr);
-        if(xhr.getResponseHeader('content-type')?.includes('application/json'))
-        {
-          const resultData ={status: xhr.status, data:JSON.parse( xhr.responseText)};
+        if (xhr.getResponseHeader('content-type')?.includes('application/json')) {
+          const resultData = {status: xhr.status, data: JSON.parse(xhr.responseText)};
           resolve(resultData);
-        }
-        else resolve(xhr);
+        } else resolve(xhr);
 
       };
 
@@ -87,12 +95,10 @@ class HTTPTransport {
 
       if (method === METHODS.GET || !data) {
         xhr.send();
-      }
-      else if( data instanceof FormData){
+      } else if (data instanceof FormData) {
         xhr.send(data);
-      }
-      else {
-        xhr.setRequestHeader('Content-Type','application/json');
+      } else {
+        xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data));
       }
     });

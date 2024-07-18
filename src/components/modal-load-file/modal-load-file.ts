@@ -1,6 +1,6 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {BASE_RESOURCES_URL} from "../../config";
-import modalController from "../../core/modal-controller";
+import modalController from "../../data/modal-controller";
 import {addActive, deleteActive, loadNewFileFromDrag} from "../../utils/load-file.utils";
 import {uploadResource} from "../../services/resources";
 import {IFile} from "../../modelsInterface/IFile";

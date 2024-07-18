@@ -1,5 +1,5 @@
 import {getUser} from "./auth.ts";
-import Router from "../core/router";
+import Router from "../data/router";
 import {BASE_URLS} from "../config";
 import {IUser} from "../modelsInterface/IUser";
 import {getChats, getChatToken, getChatUsers} from "./chat";

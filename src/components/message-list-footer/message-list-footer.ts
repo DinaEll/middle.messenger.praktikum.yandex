@@ -1,4 +1,4 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IChatMessage} from "../../modelsInterface/IChatMessage";
 import {IUser} from "../../modelsInterface/IUser";
 import {validateMessage} from "../../utils/validates.utils";

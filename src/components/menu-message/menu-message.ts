@@ -1,8 +1,8 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {IChat} from "../../modelsInterface/IChat";
-import modalController from "../../core/modal-controller";
+import modalController from "../../data/modal-controller";
 import ModalLoadFile from "../modal-load-file";
-import ModalController from "../../core/modal-controller";
+import ModalController from "../../data/modal-controller";
 
 
 interface IMenuMessageProps extends IProps {

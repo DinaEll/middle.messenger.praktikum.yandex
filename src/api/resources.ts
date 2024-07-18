@@ -1,16 +1,16 @@
-import HTTPTransport from "../core/http";
+import HTTPTransport from "../data/http";
 
 export class ResourcesApi {
-    private httpTransport = new HTTPTransport();
-    private readonly baseUrl: string = '/resources';
+  private httpTransport = new HTTPTransport();
+  private readonly baseUrl: string = '/resources';
 
-    constructor(baseUrl?: string) {
-        if (baseUrl) this.baseUrl = baseUrl;
-    }
+  constructor(baseUrl?: string) {
+    if (baseUrl) this.baseUrl = baseUrl;
+  }
 
-   public uploadResource(file: FormData) {
-        return this.httpTransport.post(this.baseUrl, {data: file});
-    }
+  public uploadResource(file: FormData) {
+    return this.httpTransport.post(this.baseUrl, {data: file});
+  }
 }
 
 export default ResourcesApi

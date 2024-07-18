@@ -1,8 +1,8 @@
-import {IProps, Block} from "../../core/block";
+import {IProps, Block} from "../../data/block";
 import {BASE_URLS} from "../../config";
 import { signIn} from "../../services/auth";
 import {IUser} from "../../modelsInterface/IUser";
-import {StoreEvents} from "../../core/store";
+import {StoreEvents} from "../../data/store";
 
 
 

@@ -1,5 +1,5 @@
-import {IProps,Block} from "../../core/block";
-import Router from "../../core/router";
+import {IProps,Block} from "../../data/block";
+import Router from "../../data/router";
 
 interface ILinkProps extends IProps{
     caption: string,
