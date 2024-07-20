@@ -69,8 +69,8 @@ export class PageRegistration extends Block {
         return (`
             <form class="container container-center">
                 {{{ FormAuth
-                    caption="Registration"
-                    captionOk="sign up"
+                    caption="Регистрация"
+                    captionOk="Войти"
                     captionCancel="Назад"
                     pageOk="allPages"
                     pageCancel="loginPage"

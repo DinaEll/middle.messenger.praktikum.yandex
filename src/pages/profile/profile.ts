@@ -103,9 +103,9 @@ export class PageProfile extends Block {
 
   getChildrenPassword() {
     return (
-      `{{{ InputWide label='Old Password' type='password' name='oldPassword' validate=validate.password ref='oldPassword' readOnly=false  }}}
-            {{{ InputWide label='New Password' type='password' name='newPassword' validate=validate.password ref='newPassword' readOnly=false  }}}
-            {{{ InputWide label='Repeat New Password' type='password' name='repeatPassword' validate=validate.password ref='repeatPassword' readOnly=false }}}
+      `{{{ InputWide label='Cтарый пароль' type='password' name='oldPassword' validate=validate.password ref='oldPassword' readOnly=false  }}}
+            {{{ InputWide label='Новый пароль' type='password' name='newPassword' validate=validate.password ref='newPassword' readOnly=false  }}}
+            {{{ InputWide label='Новый пароль (еще раз)' type='password' name='repeatPassword' validate=validate.password ref='repeatPassword' readOnly=false }}}
 
             `
     )
@@ -116,12 +116,12 @@ export class PageProfile extends Block {
     if (!user) return ''
     const {email, login, first_name, second_name, display_name, phone} = user;
     return (
-      `{{{ InputWide label='Email' type='email' name='email' validate=validate.email ref='email' readOnly=${!isEditProfile} value='${email}' }}}
-            {{{ InputWide label='Login' type='text' name='login' validate=validate.login ref='login' readOnly=${!isEditProfile} value='${login}'  }}}
-            {{{ InputWide label='First Name' type='first_name' name='first_name' validate=validate.name ref='first_name' readOnly=${!isEditProfile} value='${first_name}'  }}}
-            {{{ InputWide label='Second Name' name='second_name' validate=validate.name ref='second_name' readOnly=${!isEditProfile} value='${second_name}'  }}}
-            {{{ InputWide label='Name in Chat' name='display_name' validate=validate.displayName ref='display_name' readOnly=${!isEditProfile}  value='${display_name || ''}' }}}
-            {{{ InputWide label='Phone'  name='phone' validate=validate.phone ref='phone' readOnly=${!isEditProfile}  value='${phone}' }}}
+      `{{{ InputWide label='Почта' type='email' name='email' validate=validate.email ref='email' readOnly=${!isEditProfile} value='${email}' }}}
+            {{{ InputWide label='Логин' type='text' name='login' validate=validate.login ref='login' readOnly=${!isEditProfile} value='${login}'  }}}
+            {{{ InputWide label='Имя' type='first_name' name='first_name' validate=validate.name ref='first_name' readOnly=${!isEditProfile} value='${first_name}'  }}}
+            {{{ InputWide label='Фамилия' name='second_name' validate=validate.name ref='second_name' readOnly=${!isEditProfile} value='${second_name}'  }}}
+            {{{ InputWide label='Имя в чате' name='display_name' validate=validate.displayName ref='display_name' readOnly=${!isEditProfile}  value='${display_name || ''}' }}}
+            {{{ InputWide label='Телефон'  name='phone' validate=validate.phone ref='phone' readOnly=${!isEditProfile}  value='${phone}' }}}
 
             `
     )

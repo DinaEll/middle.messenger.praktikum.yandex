@@ -12,10 +12,10 @@ export class PageChat extends Block {
     protected render(): string {
         return (`
            <div class="chat-page">
-                <div class="chat-page-left">
+                <div class="chat-page__left">
                     {{{ ChatList }}}
                 </div>
-                <div class="chat-page-main">
+                <div class="chat-page__main">
                     {{{ MessageList }}}
                 </div>
             </div>

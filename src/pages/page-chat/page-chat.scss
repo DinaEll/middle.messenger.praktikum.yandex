@@ -8,12 +8,12 @@
   overflow: auto hidden;
 }
 
-.chat-page-left {
-  grid-area: chat-page__left;
-  max-width: 350px;
+.chat-page__left {
+    grid-area: chat-page__left;
+    max-width: 350px;
 }
 
-.chat-page-main {
-  grid-area: chat-page__main;
+.chat-page__main {
+    grid-area: chat-page__main;
 }
 
