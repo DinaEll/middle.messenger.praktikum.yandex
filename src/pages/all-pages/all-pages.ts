@@ -15,9 +15,9 @@ export class AllPages extends Block {
                     {{{Link caption="Посмотреть страничку пользователя"  type='success' page="pageProfile" }}}
                     {{{Link caption="Изменить страничку пользователя"  type='success' page="changeData" }}}
                     {{{Link caption="Изменить пароль пользователя"  type='success' page="changePassword" }}}
-                    {{{Link caption="Чат"  type='success' page="chatPage" }}}
-                    {{{Link caption="Посмотреть ошибку 404"  type='success' page="errorNotFound" }}}
-                    {{{Link caption="Посмотреть ошибку 500"  type='success' page="errorInternalServer" }}}
+                    {{{Link caption="Чат"  type='success' page="pageChat" }}}
+                    {{{Link caption="Посмотреть ошибку 404"  type='success' page="page404" }}}
+                    {{{Link caption="Посмотреть ошибку 500"  type='success' page="page500" }}}
                 </div>
             </div>
         `)

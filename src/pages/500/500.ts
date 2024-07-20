@@ -8,7 +8,7 @@ export class Page500 extends Block {
    protected render(): string {
         return (`
             <div class="container container-center">
-                {{{ Error errorNumber="500" errorText="Мы уже фиксим" page="chatPage" }}}
+                {{{ Error errorNumber="500" errorText="Мы уже фиксим" page="pageChat" }}}
             </div>`)
     }
 }

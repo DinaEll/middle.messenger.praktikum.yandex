@@ -1,12 +1,9 @@
 * {
     box-sizing: border-box!important;
-    color: var(--gray-dark);
-    font-size: 14px;
-    font-family: Arial, serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    scrollbar-color: var(--red-light);
+    scrollbar-color: var(--blue-light);
     scrollbar-width: thin;
 
     &::-webkit-scrollbar {
@@ -18,7 +15,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: var(--red-light);
+        background-color: var(--blue-light);
         border-radius: 10px;
     }
 }
