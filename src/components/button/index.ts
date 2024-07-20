@@ -1,3 +1,3 @@
-import './button.scss';
-export { Button as default } from './button';
+import './button.pcss';
+export { Button as default } from './button.ts';
 

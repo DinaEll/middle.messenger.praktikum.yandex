@@ -1,11 +1,11 @@
-import {IProps, Block} from "../../data/block";
-import modalController from "../../data/modal-controller";
-import {searchUsersByLogin} from "../../services/user-settings";
-import {IUser} from "../../modelsInterface/IUser";
-import {UserItem} from "../index";
-import {addChatUser, deleteChatUsers} from "../../services/chat";
-import {setStateCurrentChat} from "../../services/app";
-import {showModalAlert} from "../../utils/api.utils";
+import {IProps, Block} from "../../data/block.ts";
+import modalController from "../../data/modal-controller.ts";
+import {searchUsersByLogin} from "../../services/user-settings.ts";
+import {IUser} from "../../modelsInterface/IUser.ts";
+import {UserItem} from "../index.ts";
+import {addChatUser, deleteChatUsers} from "../../services/chat.ts";
+import {setStateCurrentChat} from "../../services/app.ts";
+import {showModalAlert} from "../../utils/api.utils.ts";
 
 interface IModalChatUsersProps extends IProps {
     okClick?: (result: string) => void,
@@ -94,9 +94,9 @@ export class ModalChatUsers extends Block {
     protected render(): string {
         return (`
                  {{{  Modal
-                         caption='${this.props.type === 'add' ? 'Add User' : 'Delete User'}'
-                         okText='${this.props.type === 'add' ? 'Find users' : 'OK'}'
-                         cancelText='${this.props.type === 'add' ? 'Cancel' : ''}'
+                         caption='${this.props.type === 'add' ? 'Добавить пользователя' : 'Удалить пользователя'}'
+                         okText='${this.props.type === 'add' ? 'Добавить пользователя' : 'Готово'}'
+                         cancelText='${this.props.type === 'add' ? 'Выход' : ''}'
                          okClick=okInputClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"

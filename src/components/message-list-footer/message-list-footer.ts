@@ -1,10 +1,10 @@
-import {IProps, Block} from "../../data/block";
-import {IChatMessage} from "../../modelsInterface/IChatMessage";
-import {IUser} from "../../modelsInterface/IUser";
-import {validateMessage} from "../../utils/validates.utils";
-import {IChat} from "../../modelsInterface/IChat";
-import {sendMessage} from "../../services/send-message";
-import {showAlert} from "../../utils/api.utils";
+import {IProps, Block} from "../../data/block.ts";
+import {IChatMessage} from "../../modelsInterface/IChatMessage.ts";
+import {IUser} from "../../modelsInterface/IUser.ts";
+import {validateMessage} from "../../utils/validates.utils.ts";
+import {IChat} from "../../modelsInterface/IChat.ts";
+import {sendMessage} from "../../services/send-message.ts";
+import {showAlert} from "../../utils/api.utils.ts";
 
 
 interface IMessageListProps extends IProps {
@@ -23,6 +23,7 @@ interface IMessageListProps extends IProps {
 export class MessageListFooter extends Block {
     constructor(props: IMessageListProps) {
         props.isOpenedMenuMessage = false;
+        //props.onBlurMessage = () => this.validate();
         props.onClickSend = () => {
             const error=validateMessage(this.valueMessage());
             if (!error) {

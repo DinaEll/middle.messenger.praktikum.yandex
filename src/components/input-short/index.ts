@@ -1,4 +1,4 @@
-import './input-short.scss';
-export {  InputShort as default } from './input-short';
+import './input-short.pcss';
+export {  InputShort as default } from './input-short.ts';
 
 

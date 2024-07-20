@@ -1,6 +1,6 @@
-import {IProps,Block} from "../../data/block";
-import {IUser} from "../../modelsInterface/IUser";
-import {getUserName} from "../../utils/user.utils";
+import {IProps,Block} from "../../data/block.ts";
+import {IUser} from "../../modelsInterface/IUser.ts";
+import {getUserName} from "../../utils/user.utils.ts";
 
 
 export interface IUserItemProps extends IProps {

@@ -1,4 +1,4 @@
-import {IProps,Block} from "../../data/block";
+import {IProps,Block} from "../../data/block.ts";
 
 interface IInputSearch extends IProps{
     name: string,

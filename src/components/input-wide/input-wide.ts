@@ -1,4 +1,4 @@
-import{IProps,Block} from "../../data/block";
+import{IProps,Block} from "../../data/block.ts";
 
 interface IInputWideProps extends IProps{
     type: 'text' | 'button',

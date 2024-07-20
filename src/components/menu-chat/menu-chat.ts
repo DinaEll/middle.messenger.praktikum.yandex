@@ -1,7 +1,7 @@
-import {IProps, Block} from "../../data/block";
-import {IChat} from "../../modelsInterface/IChat";
-import modalController from "../../data/modal-controller";
-import {ModalAvatar, ModalChatUsers} from "../index";
+import {IProps, Block} from "../../data/block.ts";
+import {IChat} from "../../modelsInterface/IChat.ts";
+import modalController from "../../data/modal-controller.ts";
+import {ModalAvatar, ModalChatUsers} from "../index.ts";
 
 
 interface IMenuChatProps extends IProps {
@@ -63,9 +63,9 @@ export class MenuChat extends Block {
         return (`
             <nav class='${`menu menu-chat container-shadow ${isOpenedMenu ? 'opened' : 'hide'}`}'>
                 <ul >
-                    {{{ MenuItem caption='Add User' onClick=addUser icon='plus' }}}
-                    {{{ MenuItem caption='Delete User' onClick=deleteUser icon='delete' }}}
-                    {{{ MenuItem caption='Change Chat Avatar' onClick=changeAvatarChat icon='avatar' }}}
+                    {{{ MenuItem caption='Добавить пользователя' onClick=addUser icon='plus' }}}
+                    {{{ MenuItem caption='Удалить пользователя' onClick=deleteUser icon='delete' }}}
+                    {{{ MenuItem caption='Изменить картинку чата' onClick=changeAvatarChat icon='avatar' }}}
                 </ul>
             </nav>
         `)

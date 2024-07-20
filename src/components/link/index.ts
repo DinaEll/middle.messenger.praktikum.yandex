@@ -1,4 +1,4 @@
-import './link.scss';
+import './link.pcss';
 export { Link as default } from './link';
 
 

@@ -1,2 +1,2 @@
-import './menu-message.scss';
-export { MenuMessage as default } from './menu-message';
+import './menu-message.pcss';
+export { MenuMessage as default } from './menu-message.ts';

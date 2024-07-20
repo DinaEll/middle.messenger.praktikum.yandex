@@ -1,7 +1,7 @@
-import {IProps,Block} from "../../data/block";
-import {IChatMessage} from "../../modelsInterface/IChatMessage";
-import {getShortDate} from "../../utils/date.utils";
-import {BASE_RESOURCES_URL} from "../../config";
+import {IProps,Block} from "../../data/block.ts";
+import {IChatMessage} from "../../modelsInterface/IChatMessage.ts";
+import {getShortDate} from "../../utils/date.utils.ts";
+import {BASE_RESOURCES_URL} from "../../config.ts";
 
 export interface IMessageProps extends IProps{
     message:IChatMessage;

@@ -1,2 +1,2 @@
-import './alert.scss';
-export { Alert as default  } from './alert';
+import './alert.pcss';
+export { Alert as default  } from './alert.ts';

@@ -1,6 +1,6 @@
-import {IProps, Block} from "../../data/block";
-import {IChat} from "../../modelsInterface/IChat";
-import {StoreEvents} from "../../data/store";
+import {IProps, Block} from "../../data/block.ts";
+import {IChat} from "../../modelsInterface/IChat.ts";
+import {StoreEvents} from "../../data/store.ts";
 
 interface IMessageListProps extends IProps {
     currentChat: IChat|null;
@@ -41,7 +41,7 @@ export class MessageListHeader extends Block {
                         {{{ Avatar imageUrl='${avatar||''}' size='sm' }}}
                         <div class="message-list__header__title">
                             <span>${title}</span>
-                            <p>${countUsers+' members'}</p>
+                            <p>${countUsers+' участник'}</p>
                         </div>
                     </div>
                     {{{ Button type="dots" onClick=openMenuChat}}}

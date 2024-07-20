@@ -1,4 +1,4 @@
-import './chat-list.scss';
+import './chat-list.pcss';
 export { ChatList as default } from './chat-list';
 
 
