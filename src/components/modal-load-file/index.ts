@@ -1,2 +1,2 @@
-import './modal-load-file.scss';
-export { ModalLoadFile as default  } from './modal-load-file';
+import './modal-load-file.pcss';
+export { ModalLoadFile as default  } from './modal-load-file.ts';

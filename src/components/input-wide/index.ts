@@ -1,4 +1,4 @@
-import './input-wide.scss';
+import './input-wide.pcss';
 export { InputWide as default } from './input-wide';
 
 

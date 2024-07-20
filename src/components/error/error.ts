@@ -1,4 +1,4 @@
-import{IProps,Block} from "../../data/block";
+import{IProps,Block} from "../../data/block.ts";
 
 interface IErrorProps extends IProps{
     errorNumber: string,
@@ -11,17 +11,17 @@ export class Error extends Block {
         super(props);
     }
     protected render(): string {
-        const { errorNumber='',pageGoBack='startPage',errorText=''} = this._props as IErrorProps;
+        const { errorNumber='',pageGoBack='',errorText=''} = this._props as IErrorProps;
         return (`
             <div class="error">
                 <h1 class="error__number">${errorNumber}</h1>
                 <h2 class="error__text">
-                    Ошибка, уже фиксим
+                    Woops!
                 </h2>
                 <h2 class="error__text">
                    ${errorText}
                 </h2>
-                {{{ Link page='${pageGoBack}' caption='На стартовую страничку'  }}}
+                {{{ Link page='${pageGoBack}' caption='Go Back'  }}}
             </div>
         `)
     }

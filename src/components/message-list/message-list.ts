@@ -1,11 +1,11 @@
-import {IProps, Block} from "../../data/block";
-import {IChatMessage} from "../../modelsInterface/IChatMessage";
-import {IUser} from "../../modelsInterface/IUser";
-import {Message} from "../index";
-import {IMessageProps} from "../message/message";
-import {IChat} from "../../modelsInterface/IChat";
-import {StoreEvents} from "../../data/store";
-import {getUserName} from "../../utils/user.utils";
+import {IProps, Block} from "../../data/block.ts";
+import {IChatMessage} from "../../modelsInterface/IChatMessage.ts";
+import {IUser} from "../../modelsInterface/IUser.ts";
+import {Message} from "../index.ts";
+import {IMessageProps} from "../message/message.ts";
+import {IChat} from "../../modelsInterface/IChat.ts";
+import {StoreEvents} from "../../data/store.ts";
+import {getUserName} from "../../utils/user.utils.ts";
 
 interface IMessageListProps extends IProps {
     messageList: IChatMessage[];
@@ -60,7 +60,7 @@ export class MessageList extends Block {
         const {messageList, currentChat, currentUser} = this.props;
         if (!currentChat)
             return (`<div class="message-list__empty">
-                        ${currentUser?`<p class="">Выберите чат, чтобы написать сообщение</p>`:``}
+                        ${currentUser?`<p class="">Выберите чат для общения</p>`:``}
                     </div>`)
         const users = currentChat.users?.length || 0;
         return (`
@@ -74,7 +74,7 @@ export class MessageList extends Block {
                      {{{MessageListFooter }}}
                 ` :
             `<div class="message-list__empty">
-                     <p class="">Добавьте друга или котика в чат</p>
+                     <p class="">Добавить участника чата</p>
                 </div>`
         }
 

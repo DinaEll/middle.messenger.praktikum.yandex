@@ -1,13 +1,13 @@
-import {IProps,Block} from "../../data/block";
+import {IProps, Block} from "../../data/block.ts";
 
 
 interface IInputProps extends IProps {
     classes: string,
     placeholder: string,
-    onBlur:()=>void,
-    ref:string,
-    name:string,
-    value:string
+    onBlur: () => void,
+    ref: string,
+    name: string,
+    value: string
     type: 'text' | 'password',
 }
 
@@ -16,6 +16,14 @@ export class Input extends Block {
         props.events = {
             blur: props.onBlur || (() => {
             }),
+            /*keypress: ((event:KeyboardEvent) => {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    props.onBlur();
+                }
+
+            }) || (() => {
+            })*/
         };
         super(props)
     }

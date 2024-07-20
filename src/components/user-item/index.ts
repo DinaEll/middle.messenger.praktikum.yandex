@@ -1,3 +1,3 @@
-import './user-item.scss';
+import './user-item.pcss';
 
-export {UserItem as default} from './user-item';
+export {UserItem as default} from './user-item.ts';

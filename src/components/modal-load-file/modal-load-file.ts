@@ -1,10 +1,10 @@
-import {IProps, Block} from "../../data/block";
-import {BASE_RESOURCES_URL} from "../../config";
-import modalController from "../../data/modal-controller";
-import {addActive, deleteActive, loadNewFileFromDrag} from "../../utils/load-file.utils";
-import {uploadResource} from "../../services/resources";
-import {IFile} from "../../modelsInterface/IFile";
-import { showModalAlert} from "../../utils/api.utils";
+import {IProps, Block} from "../../data/block.ts";
+import {BASE_RESOURCES_URL} from "../../config.ts";
+import modalController from "../../data/modal-controller.ts";
+import {addActive, deleteActive, loadNewFileFromDrag} from "../../utils/load-file.utils.ts";
+import {uploadResource} from "../../services/resources.ts";
+import {IFile} from "../../modelsInterface/IFile.ts";
+import { showModalAlert} from "../../utils/api.utils.ts";
 
 interface IModalAvatarProps extends IProps {
     okClick?: () => void,
@@ -56,7 +56,7 @@ export class ModalLoadFile extends Block {
                 dragleave: (e: Event) => {
                     deleteActive(e);
                 },
-                drop: _onAddFile<DragEvent>, //todo
+                drop: _onAddFile<DragEvent>,
                 change: _onAddFile<Event>,
 
             }
@@ -92,9 +92,9 @@ export class ModalLoadFile extends Block {
     protected render(): string {
         return (`
                  {{{  Modal
-                         caption="Добавить файл"
-                         okText='Отправить'
-                         cancelText='Назад'
+                         caption="Add File"
+                         okText='Send'
+                         cancelText='Cancel'
                          okClick=okClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"

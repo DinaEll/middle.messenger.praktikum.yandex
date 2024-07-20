@@ -1,4 +1,4 @@
-import  {IProps,Block} from "../../data/block";
+import {IProps, Block} from "../../data/block.ts";
 
 interface IButtonProps extends IProps {
     type: 'arrow' | 'dots' | 'paperclip' | 'cancel' | 'number' | 'close',

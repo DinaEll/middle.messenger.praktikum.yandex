@@ -1,7 +1,7 @@
-import {IProps,Block} from "../../data/block";
-import {IUser} from "../../modelsInterface/IUser";
-import {ALL_VALIDATE_FIELDS, IValidateType} from "../../modelsInterface/IValidateType";
-import {logOut} from "../../services/auth";
+import {IProps, Block} from "../../data/block.ts";
+import {IUser} from "../../modelsInterface/IUser.ts";
+import {ALL_VALIDATE_FIELDS, IValidateType} from "../../modelsInterface/IValidateType.ts";
+import {logOut} from "../../services/auth.ts";
 
 interface IFormProfileProps extends IProps {
     user?: IUser | null,
@@ -62,10 +62,10 @@ export class FormProfile extends Block {
             `<div class="profile__button">
                     {{{ Button caption="${buttonText}" onClick=onClickOkButton isSubmit=true}}}
                 </div>` :
-          `<div class="profile__buttons">
-                    {{{Link caption="Изменить профиль пользователя" href='' type='success' linkLine=true onClick=onClickLink id='edit_profile'}}}
+            `<div class="profile__buttons">
+                    {{{Link caption="Изменить данные пользователя" href='' type='success' linkLine=true onClick=onClickLink id='edit_profile'}}}
                     {{{Link caption="Изменить пароль" href='' type='success' linkLine=true onClick=onClickLink id='edit_password'}}}
-                    {{{Button caption="Выход" onClick=onLogOut type='link' }}}
+                    {{{Button caption="Выйти" onClick=onLogOut type='link' }}}
                 </div>`
         }
              <div class="block-cancel">

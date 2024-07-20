@@ -1,2 +1,2 @@
-import './modal-chat-users.scss';
-export { ModalChatUsers as default  } from './modal-chat-users';
+import './modal-chat-users.pcss';
+export { ModalChatUsers as default  } from './modal-chat-users.ts';

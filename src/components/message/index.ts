@@ -1,4 +1,4 @@
-import './message.scss';
+import './message.pcss';
 export {  Message as default} from './message';
 
 

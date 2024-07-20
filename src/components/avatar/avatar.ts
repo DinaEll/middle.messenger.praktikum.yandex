@@ -1,7 +1,7 @@
-import {IProps, Block} from "../../data/block";
-import modalController from "../../data/modal-controller";
-import { ModalAvatar} from "../index";
-import {BASE_RESOURCES_URL} from "../../config";
+import {IProps, Block} from "../../data/block.ts";
+import modalController from "../../data/modal-controller.ts";
+import { ModalAvatar} from "../index.ts";
+import {BASE_RESOURCES_URL} from "../../config.ts";
 
 interface IAvatarProps extends IProps {
     size: 'sm' | 'md',
@@ -38,7 +38,7 @@ export class Avatar extends Block {
                     <img src='${BASE_RESOURCES_URL+imageUrl}' alt="image avatar" class="avatar__image"/>` : ``}
                 ${isLoadAvatar ? `
                     <div class="avatar__hover">
-                        <div class="avatar__hover__text">Добавить новый Аватар</div>
+                        <div class="avatar__hover__text">Load New Avatar</div>
                     </div>` : ""}
             </div>
                  `)

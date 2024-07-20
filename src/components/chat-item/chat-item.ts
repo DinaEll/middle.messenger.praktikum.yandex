@@ -1,38 +1,38 @@
-import {IProps, Block} from "../../data/block";
-import {getShortDate} from "../../utils/date.utils";
+import {IProps, Block} from "../../data/block.ts";
+import {getShortDate} from "../../utils/date.utils.ts";
 
 export interface IChatItemProps extends IProps {
-  id: number;
-  title: string;
-  avatar: string|null;
-  unread_count: string|null;
-  last_message_content:string|null;
-  last_message_time:string|null;
+    id: number;
+    title: string;
+    avatar: string|null;
+    unread_count: string|null;
+    last_message_content:string|null;
+    last_message_time:string|null;
 
-  onClick: (id:string) => void
+    onClick: (id:string) => void
 }
 
 export class ChatItem extends Block {
-  constructor(props: IChatItemProps) {
-    super({
-      ...props,
-      events: {
-        click: (e: Event) => {
-          e.stopPropagation();
-          props.onClick(String(this.props.id));
-        }
-      }
-    })
-  }
+    constructor(props: IChatItemProps) {
+        super({
+            ...props,
+            events: {
+                click: (e: Event) => {
+                    e.stopPropagation();
+                    props.onClick(String(this.props.id));
+                }
+            }
+        })
+    }
 
-  public get props() {
-    return this._props as IChatItemProps;
-  }
+    public get props() {
+        return this._props as IChatItemProps;
+    }
 
-  protected render(): string {
-    const {id,title,avatar,unread_count,last_message_content,last_message_time} = this._props as IChatItemProps;
+    protected render(): string {
+        const {id,title,avatar,unread_count,last_message_content,last_message_time} = this._props as IChatItemProps;
 
-    return (`
+        return (`
             <li class="chat-item">
                 <div class="chat-item__avatar">
                   {{{ Avatar imageUrl='${avatar||''}' isLoadAvatar=false size='sm' }}}
@@ -52,10 +52,10 @@ export class ChatItem extends Block {
                     </div>
                     ${unread_count ? `{{{ Button type="number" caption='${unread_count}' }}}` : ''}
                 </div>` : ` <div class="chat-item__message__content">
-                        <p>Пока нет сообщений</p>
+                        <p> Нет новых сообщений</p>
                     </div>`}
 
             </li>
         `)
-  }
+    }
 }

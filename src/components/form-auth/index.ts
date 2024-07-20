@@ -1,3 +1,3 @@
-import './form-auth.scss';
-export {  FormAuth as default } from './form-auth';
+import './form-auth.pcss';
+export {  FormAuth as default } from './form-auth.ts';
 

@@ -1,5 +1,5 @@
-import {IProps, Block} from "../../data/block";
-import modalController from "../../data/modal-controller";
+import {IProps, Block} from "../../data/block.ts";
+import modalController from "../../data/modal-controller.ts";
 
 interface IModalPromptProps extends IProps {
     caption: string,
@@ -51,7 +51,7 @@ export class ModalPrompt extends Block {
                  {{{  Modal
                          caption='${this.props.caption}'
                          okText='${this.props.okText}'
-                         cancelText='Назад'
+                         cancelText='Cancel'
                          okClick=okInputClick
                          cancelClick=cancelClick
                          children="${this.getChildren()}"
