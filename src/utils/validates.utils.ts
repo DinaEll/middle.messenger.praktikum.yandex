@@ -56,7 +56,7 @@ export const validateEmail = (value: string) => {
   if (value.length === 0) return `Поле не должно быть пустым`;
 
   if (!value.match(/^\S+@\S+\.\S+$/)) {
-    return 'Неверный пароль'
+    return 'Неверная почта'
   }
   return '';
 }
