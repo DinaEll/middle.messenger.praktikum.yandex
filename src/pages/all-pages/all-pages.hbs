@@ -1,0 +1,17 @@
+<main>
+    <form class="start-page">
+        <div class="start-page__content">
+            {{> PageTitle title="Актуальные странички" }}
+        </div>
+          <div class="">
+            {{>Link caption="Авторизация"  type='success' page="login" }}
+            {{>Link caption="Регистрация"  type='success' page="registration" }}
+            {{>Link caption="Посмотреть страничку пользователя"  type='success' page="user" }}
+            {{>Link caption="Изменить страничку пользователя"  type='success' page="changeData" }}
+            {{>Link caption="Изменить пароль пользователя"  type='success' page="changePassword" }}
+            {{>Link caption="Чаты"  type='success' page="chat" }}
+            {{>Link caption="Посмотреть ошибку 404"  type='success' page="errorNotFound" }}
+            {{>Link caption="Посмотреть ошибку 500"  type='success' page="errorInternalServer" }}
+          </div>
+    </form>
+</main>
