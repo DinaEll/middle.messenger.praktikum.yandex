@@ -23,7 +23,6 @@ interface IMessageListProps extends IProps {
 export class MessageListFooter extends Block {
     constructor(props: IMessageListProps) {
         props.isOpenedMenuMessage = false;
-        //props.onBlurMessage = () => this.validate();
         props.onClickSend = () => {
             const error=validateMessage(this.valueMessage());
             if (!error) {
