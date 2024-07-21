@@ -1,4 +1,4 @@
-import './styles/index.scss';
+import './styles/index.pcss';
 import * as Components from './components';
 import * as Pages from './pages';
 import {registerComponent} from "./data/register-components";
