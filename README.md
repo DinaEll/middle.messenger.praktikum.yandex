@@ -20,8 +20,7 @@ https://github.com/DinaEll/middle.messenger.praktikum.yandex
 
 ### Netlify
 Результат третьего спринта можно посмотреть по ссылке:
-https://deploy--darling-cendol-394045.netlify.app/
-
+https://darling-cendol-394045.netlify.app/
 Новые команды на тест
 
 - `npm run lint` — для проверки кода
