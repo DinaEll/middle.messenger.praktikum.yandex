@@ -19,7 +19,7 @@ https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0%3
 https://github.com/DinaEll/middle.messenger.praktikum.yandex
 
 ### Netlify
-Все актуальные страницы перечислены на стартовой странице чата  
+Результат третьего спринта можно посмотреть по ссылке:
 https://deploy--darling-cendol-394045.netlify.app/
 
 Новые команды на тест
