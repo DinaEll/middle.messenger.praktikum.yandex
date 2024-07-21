@@ -78,7 +78,6 @@ export class ChatList extends Block {
                  {{{Loader }}}
             </div>`
 
-        //if (!list || list.length === 0) return 'Add chat';
         return (`
             <div class="chat-list">
                 <nav class="chat-list__header">
@@ -86,9 +85,6 @@ export class ChatList extends Block {
                 {{{Button caption="Новый чат" type='link' onClick=showModalAddChat }}}
                  {{{Link caption="Профиль" href="/settings"  linkIcon=true }}}
                 </nav>
-<!--                <div class="chat-list__search">
-                    {{{ InputSearch }}}
-                </div>-->
                 <ul class="chat-list__chats">
                     ${this.getChats(list)}
                 </ul>
