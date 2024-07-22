@@ -4,6 +4,7 @@ import {StoreEvents} from "../../data/store";
 import {showAlert} from "../../utils/api.utils";
 import {updateUserPassword, updateUserProfile} from "../../services/user-settings";
 import Router from "../../data/router";
+import {BASE_URLS} from "../../config";
 
 export interface IPageProfileProps extends IProps {
   user?: IUser | null;
@@ -36,7 +37,7 @@ export class PageProfile extends Block {
           this.props.onChangeStateForm(false, false);
           return;
         }
-        Router.getRouter().back();
+        Router.getRouter().go(BASE_URLS['page-chat']);
       },
       onChangeStateForm: (isEditPassword: boolean, isEditProfile: boolean) => {
         this.props.isEditProfile = isEditProfile;

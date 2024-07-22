@@ -12,7 +12,7 @@ const initialStateApp = async () => {
     try {
         user = await getUser();
         if(user) {
-            Router.getRouter().go(BASE_URLS['page-chat']);
+            Router.getRouter().start();
         }
     } catch (error) {
         if (Router.getRouter().currentRoute !== BASE_URLS['page-sign-up']) Router.getRouter().go(BASE_URLS['page-login']);
