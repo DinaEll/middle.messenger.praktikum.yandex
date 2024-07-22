@@ -69,7 +69,7 @@ export class MessageList extends Block {
     return (`
           <div class="message-list">
               {{{ MessageListHeader }}}
-              ${users > 1 ?
+              ${users > 0 ?
       ` <ul class="message-list__main">
                   ${this.getListMessages(messageList)}
                   <li class="scroll-bottom"></li>
@@ -80,38 +80,8 @@ export class MessageList extends Block {
                   <p class="">Добавить участника чата</p>
               </div>`
     }
-              <div class="message-input-container">
-                  <input type="text" id="message-input" placeholder="Введите сообщение" />
-                  <button id="send-button">Отправить</button>
-              </div>
           </div>
       `)
-  }
-
-
-  // работает
-  protected componentDidMount(): void {
-    const sendButton = document.getElementById('send-button');
-    const messageInput = document.getElementById('message-input') as HTMLInputElement;
-
-    if (sendButton && messageInput) {
-      sendButton.addEventListener('click', () => {
-        const message = messageInput.value.trim();
-        if (message) {
-          const newMessage: IChatMessage = {
-            id: Date.now(),
-            user_id: Number(this.props.currentUser?.id) || 0,
-            content: message,
-            time: new Date().toISOString(),
-            chat_id: this.props.currentChat?.id || 0,
-            type: 'message'
-          };
-          this.props.messageList.push(newMessage);
-          this.setProps({ messageList: this.props.messageList } as IMessageListProps);
-          messageInput.value = '';
-        }
-      });
-    }
   }
 
 

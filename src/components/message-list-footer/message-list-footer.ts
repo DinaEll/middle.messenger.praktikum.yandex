@@ -66,7 +66,7 @@ export class MessageListFooter extends Block {
                         type="text"
                         classes="message-list__footer__input"
                         value='${message}'
-                        placeholder="Message"
+                        placeholder="Сообщение"
                         name="message"
                         onBlur=onBlurMessage
                     }}}
