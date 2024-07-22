@@ -10,5 +10,4 @@ export const BASE_URLS={
     'page-500':"/500",
     'page-chat':"/messenger",
     'page-default':"/",
-    'page-all-components':"/story-book",
 }

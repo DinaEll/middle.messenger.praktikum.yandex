@@ -20,6 +20,10 @@ https://www.figma.com/file/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0%3
 https://github.com/DinaEll/middle.messenger.praktikum.yandex
 
 ### Netlify
+Обновления по правкам второго ревью -
+- исправлены инпуты, больше не задваиваются. сообщение можно отправлять после добавления пользователя в чат - это соответствует логике тз, сначала добавляем пользователя, потом отправляем сообщение
+
+
 Результат третьего спринта можно посмотреть по ссылке:
 https://darling-cendol-394045.netlify.app/
 Новые команды на тест
