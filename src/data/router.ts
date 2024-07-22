@@ -30,6 +30,7 @@ class Router {
   }
 
   use(pathname: string, block: typeof Block) {
+    // console.log(`Adding route: ${pathname}`);
     const route = new Route(pathname, block, {rootQuery: this._rootQuery});
     this.routes?.push(route);
     return this;
@@ -37,14 +38,18 @@ class Router {
 
   start() {
     window.onpopstate = event => {
+      // console.log(`onpopstate: ${window.location.pathname}`);
       this._onRoute((event?.currentTarget as Window)?.location?.pathname);
     };
+    // console.log(`Starting router with initial path: ${window.location.pathname}`);
     this._onRoute(window.location.pathname);
   }
 
   _onRoute(pathname: string) {
+    // console.log(`Routing to: ${pathname}`);
     const route = this.getRoute(pathname);
     if (!route) {
+      // console.log(`Route not found: ${pathname}`);
       return;
     }
 
@@ -57,27 +62,27 @@ class Router {
   }
 
   go(pathname: string) {
+    // console.log(`Navigating to: ${pathname}`);
     this.history?.pushState({}, "", pathname);
     this._onRoute(pathname);
   }
 
   back() {
     this.history?.back();
-
   }
 
   forward() {
     this.history?.forward();
-
   }
 
   update() {
     this.history?.go(0);
-
   }
 
   getRoute(pathname: string) {
-    return this.routes?.find(route => route.match(pathname));
+    const route = this.routes?.find(route => route.match(pathname));
+    // console.log(`getRoute for ${pathname}: ${route ? "found" : "not found"}`);
+    return route;
   }
 }
 
