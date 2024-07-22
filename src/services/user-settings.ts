@@ -2,7 +2,7 @@ import UserSettingsApi from "../api/user-settings";
 import {IPasswords, IUser} from "../modelsInterface/IUser";
 import {responseHasError} from "../utils/api.utils";
 import {setStateUser} from "./app";
-import Router from "../data/router";
+// import Router from "../data/router";
 
 
 const userApi=new UserSettingsApi('/user');
@@ -18,7 +18,7 @@ const  updateUserPassword=async (newUserPasswords: IPasswords) => {
     const result= await userApi.changeUserPassword(newUserPasswords);
     const error=responseHasError(result);
     if(error) throw Error(error);
-    Router.getRouter().back();
+    // Router.getRouter().back();
 }
 
 const  updateUserAvatar=async (newAvatar:FormData) => {
