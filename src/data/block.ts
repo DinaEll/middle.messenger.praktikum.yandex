@@ -92,9 +92,10 @@ export class Block {
     }
   }
 
-  protected componentDidUpdate(oldProps: IProps, newProps: IProps) {
-    return isDeepEqual<IProps>(oldProps as { [index: string]: IProps }, newProps as { [index: string]: IProps });
-  }
+    protected componentDidUpdate(oldProps: IProps, newProps: IProps) {
+        // this.setProps(newProps);
+        return isDeepEqual<IProps>(oldProps as { [index: string]: IProps }, newProps as { [index: string]: IProps });
+    }
 
   private _componentWillUnmount() {
     this.componentWillUnmount()
@@ -125,25 +126,26 @@ export class Block {
     return this.refs
   }
 
-  private _render() {
-    try {
-      const fragment = this.compile(this.render(), this._props);
+    private _render() {
+        try{
+            const fragment = this.compile(this.render(), this._props);
 
-      const newElement = fragment.firstElementChild as HTMLElement;
+            const newElement = fragment.firstElementChild as HTMLElement;
 
-      if (this._element && newElement) {
-        this._element.replaceWith(newElement);
-      }
+            if (this._element&&newElement) {
+                this._element.replaceWith(newElement);
+            }
 
-      this._element = newElement;
+            this._element = newElement;
 
-      this._addEvents();
+            this._addEvents();
 
-    } catch (err: unknown) {
-      console.error('Новая ошибка:', err);
+        }
+        catch (err:unknown) {
+            //console.log('ошибка',err)
+        }
+
     }
-
-  }
 
   _addEvents() {
     const {events = {}} = this._props as { events: Record<string, () => void> };
