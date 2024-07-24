@@ -17,15 +17,18 @@ const signUp = async (data: IUser) => {
     }
     return result.data;
 }
+
 const signIn = async (data: IAuthData) => {
-    const result = await authApi.signIn(data);
-    const error = responseHasError(result );
-    if (error) throw Error(error);
-    if (!error) {
-        await initialStateApp();
-        Router.getRouter().go(BASE_URLS['page-chat'])
+  try {
+    await authApi.signIn(data);
+    await initialStateApp();
+    Router.getRouter().go(BASE_URLS['page-chat']);
+  } catch (error: any) {
+    if (error?.reason === 'User already in system') {
+      Router.getRouter().go(BASE_URLS['page-chat']);
     }
-}
+  }
+};
 
 const getUser = async () => {
   const result = await authApi.getAuthUser();
