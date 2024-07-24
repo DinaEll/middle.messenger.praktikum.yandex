@@ -18,13 +18,18 @@ const signUp = async (data: IUser) => {
     return result.data;
 }
 
+interface CustomError extends Error {
+  reason?: string;
+}
+
 const signIn = async (data: IAuthData) => {
   try {
     await authApi.signIn(data);
     await initialStateApp();
     Router.getRouter().go(BASE_URLS['page-chat']);
-  } catch (error: any) {
-    if (error?.reason === 'User already in system') {
+  } catch (error) {
+    const customError = error as CustomError;
+    if (customError.reason === 'User already in system') {
       Router.getRouter().go(BASE_URLS['page-chat']);
     }
   }
