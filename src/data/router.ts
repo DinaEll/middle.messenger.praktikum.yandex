@@ -6,7 +6,7 @@ class Router {
   private routes: Route[] | undefined;
   private history: History | undefined;
   private _currentRoute: null | Route = null;
-  private _rootQuery: string | undefined;
+  private readonly _rootQuery: string | undefined;
 
   constructor(rootQuery: string) {
     if (Router.__instance) {
@@ -29,6 +29,11 @@ class Router {
     return this._currentRoute?.pathname;
   }
 
+
+  public currentRoutePathName() {
+    return this._currentRoute ? this._currentRoute.pathname : null;
+  }
+
   use(pathname: string, block: typeof Block) {
     // console.log(`Adding route: ${pathname}`);
     const route = new Route(pathname, block, {rootQuery: this._rootQuery});
@@ -37,7 +42,7 @@ class Router {
   }
 
   start() {
-    window.onpopstate = event => {
+    window.onpopstate = (event) => {
       // console.log(`onpopstate: ${window.location.pathname}`);
       this._onRoute((event?.currentTarget as Window)?.location?.pathname);
     };
@@ -45,7 +50,7 @@ class Router {
     this._onRoute(window.location.pathname);
   }
 
-  _onRoute(pathname: string) {
+  private _onRoute(pathname: string) {
     // console.log(`Routing to: ${pathname}`);
     const route = this.getRoute(pathname);
     if (!route) {
@@ -58,7 +63,7 @@ class Router {
     }
 
     this._currentRoute = route;
-    route.render();
+    route.navigate(pathname);
   }
 
   go(pathname: string) {
@@ -80,9 +85,9 @@ class Router {
   }
 
   getRoute(pathname: string) {
-    const route = this.routes?.find(route => route.match(pathname));
+    if (!this.routes || this.routes.length === 0) return null;
     // console.log(`getRoute for ${pathname}: ${route ? "found" : "not found"}`);
-    return route;
+    return this.routes.find(route => route.match(pathname));
   }
 }
 
