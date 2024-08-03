@@ -2,7 +2,7 @@ import Block, {IProps} from "../block.ts";
 import { expect} from "chai";
 import sinon from "sinon";
 
-describe('Block', () => {
+describe('Block:', () => {
 
     interface IComponent extends IProps {
         text:string
@@ -18,18 +18,18 @@ describe('Block', () => {
             return '<div></div>'
         }
     }
-    it('Create Component is correct', () => {
+    it('create component is correct', () => {
 
         const block=new Component({text:'text'});
         expect(block.getContent()).not.null;
     });
-    it('Component should render', () => {
+    it('component should render', () => {
 
         const block=new Component({text:'text'});
        const render= sinon.spy(block,'render');
         expect(render.calledOnce);
     });
-    it('Component should render again after change props', () => {
+    it('component should render again after change props', () => {
 
         const block=new Component({text:'text'});
         const render= sinon.spy(block,'render');

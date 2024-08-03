@@ -2,7 +2,7 @@ import {assert} from "chai";
 import HTTPTransport from "../http.ts";
 import sinon, { SinonStub} from "sinon";
 
-describe('HTTP Transport', () => {
+describe('HTTP Transport:', () => {
     let http: HTTPTransport;
     let stubRequest: SinonStub;
 
@@ -11,13 +11,13 @@ describe('HTTP Transport', () => {
         stubRequest=sinon.stub(http,'request').callsFake(()=>Promise.resolve())
     });
 
-    it('get should get request', () => {
+    it('get should GET request', () => {
         http.get('/url');
         assert(stubRequest.calledOnce);
         assert(stubRequest.calledWithMatch('/url'));
     });
 
-    it('put should put request', () => {
+    it('put should PUT request', () => {
         http.put('/url');
         assert(stubRequest.calledOnce);
         assert(stubRequest.calledWithMatch('/url'));
@@ -27,7 +27,7 @@ describe('HTTP Transport', () => {
         assert(stubRequest.calledOnce);
         assert(stubRequest.calledWithMatch('/url'));
     });
-    it('delete should Delete request', () => {
+    it('delete should DELETE request', () => {
         http.delete('/url');
         assert(stubRequest.calledOnce);
         assert(stubRequest.calledWithMatch('/url'));

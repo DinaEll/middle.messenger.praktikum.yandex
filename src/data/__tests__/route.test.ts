@@ -2,12 +2,12 @@ import {assert} from "chai";
 import Route from "../route.ts";
 import {Page404} from "../../pages";
 
-describe('Route', () => {
-    it('Object should create correct', () => {
+describe('Route:', () => {
+    it('object should create correct', () => {
         const route = new Route('/login', Page404, {});
         assert.equal(route.pathname, '/login');
     });
-    describe('Route Methods', () => {
+    describe('Route Methods:', () => {
         let route:Route;
         beforeEach(()=>{
             route = new Route('/login', Page404, {});
