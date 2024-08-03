@@ -9,18 +9,20 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "eslint . && tsc && vite build",
+    "build": "eslint . &&tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .ts --ext .js",
     "lint:css": "stylelint '**/*.css' '**/*.scss'",
     "lint:css:fix": "stylelint '**/*.css' --fix",
+    "stylelint": "stylelint src/**/*.pcss ",
+    "eslint": "eslint . ",
     "test": "mocha",
-    "check_all": "npm-run-all stylelint eslint test",
+    "check_all": "npm-run-all stylelint  eslint  test",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.pcss": "npm run lint:css",
-    "*.{js,jsx,ts,tsx}": "npm run lint"
+    "*.pcss": "npm run stylelint",
+    "*.{js,jsx,ts,tsx}": "npm run eslint"
   },
   "devDependencies": {
     "@types/chai": "^4.3.17",
@@ -78,7 +80,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm-run-all test lint:all",
+      "pre-push": "npm run other command"
     }
   }
 }
